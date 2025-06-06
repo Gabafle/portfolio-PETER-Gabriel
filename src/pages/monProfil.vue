@@ -196,7 +196,7 @@
           <v-btn
             id="downloadCV"
             class="btnDownload"
-            href="@/assets/PETER_Gabriel.pdf"
+            href="/portfolio-PETER-Gabriel/assets/PETER_Gabriel.pdf"
             download
           >
             <v-icon left>mdi-download</v-icon>
@@ -206,7 +206,7 @@
           <div class="vf-file-preview-pdf-container">
             <iframe
               class="vf-file-preview-pdf"
-              src="@/assets/PETER_Gabriel.pdf"
+              src="/portfolio-PETER-Gabriel/assets/PETER_Gabriel.pdf"
               type="application/pdf"
             ></iframe>
           </div>
@@ -280,7 +280,7 @@ import DefaultLayout from "@/components/defaultLayout.vue";
 .subtitle {
   max-width: 100%;
   max-height: 100%;
-  background-image: url("@/assets/section.png");
+  background-image: url("/portfolio-PETER-Gabriel/assets/section.png");
   color: #F5CB5C;
   text-align: center;
   font-size: 200%;
