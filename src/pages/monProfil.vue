@@ -206,7 +206,7 @@
           <div class="vf-file-preview-pdf-container">
             <iframe
               class="vf-file-preview-pdf"
-              src="PETER_Gabriel.pdf"
+              src="../../PETER_Gabriel.pdf"
               type="application/pdf"
             ></iframe>
           </div>
