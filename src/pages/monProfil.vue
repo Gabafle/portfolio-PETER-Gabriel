@@ -49,7 +49,7 @@
 
             <br>
             <p>
-              <em>Si vous voulez en savoir plus ou accéder à mon CV c'est par <a href="#downloadCV">ici !</a> </em>
+              <em>Si vous voulez en savoir plus ou accéder à mon CV c'est par <a href="../../monProfil.vue/#downloadCV">ici !</a> </em>
             </p>
           </v-card-text>
 
@@ -206,7 +206,7 @@
           <div class="vf-file-preview-pdf-container">
             <iframe
               class="vf-file-preview-pdf"
-              src="PETER_Gabriel.pdf"
+              src="../../public/PETER_Gabriel.pdf"
               type="application/pdf"
             ></iframe>
           </div>
@@ -281,7 +281,7 @@ import DefaultLayout from "@/components/defaultLayout.vue";
 .subtitle {
   max-width: 100%;
   max-height: 100%;
-  background-image: url("section.png");
+  background-image: url("../../public/section.png");
   color: #F5CB5C;
   text-align: center;
   font-size: 200%;

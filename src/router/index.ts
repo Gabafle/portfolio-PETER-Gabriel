@@ -13,7 +13,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHashHistory('/portfolio-PETER-Gabriel/'),
   routes,
 })
 
