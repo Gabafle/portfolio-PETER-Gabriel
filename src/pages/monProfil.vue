@@ -1,11 +1,14 @@
 <template>
   <DefaultLayout>
     <v-app class="contentPage">
+      <h1 class="title">
+        à Propos
+      </h1>
+      <v-divider />
 
-      <h1 class="title">à Propos</h1>
-      <v-divider></v-divider>
-
-      <h2 class="subtitle">Ma Description</h2>
+      <h2 class="subtitle">
+        Ma Description
+      </h2>
 
       <v-container>
         <v-card>
@@ -49,27 +52,37 @@
 
             <br>
             <p>
-              <em>Si vous voulez en savoir plus ou accéder à mon CV c'est par <a href="../../monProfil.vue/#downloadCV">ici !</a> </em>
+              <em>Si vous voulez en savoir plus ou accéder à mon CV c'est par <a href="#downloadCV">ici !</a> </em>
             </p>
           </v-card-text>
-
         </v-card>
       </v-container>
 
-      <v-divider></v-divider>
+      <v-divider />
 
-      <h2 class="subtitle">Mon Parcours</h2>
+      <h2 class="subtitle">
+        Mon Parcours
+      </h2>
       <v-container>
-        <v-stepper class="stepperButton" :items="['2025-2024', '2024-2023','2023-2022']">
-
-          <template v-slot:item.1>
+        <v-stepper
+          class="stepperButton"
+          :items="['2025-2024', '2024-2023','2023-2022']"
+        >
+          <template #item.1>
             <v-card>
-              <v-card-title class="yearsStyleStepper">Years 2025 to 2024</v-card-title>
-              <v-timeline dot-color="#F5CB5C" align="start">
+              <v-card-title class="yearsStyleStepper">
+                Years 2025 to 2024
+              </v-card-title>
+              <v-timeline
+                dot-color="#F5CB5C"
+                align="start"
+              >
                 <v-timeline-item>
                   <div>
-                    <h2 class="timelineTitleContent">Juillet 2025 - Septembre 2025 : Stage en développement Python
-                      Nexialog </h2>
+                    <h2 class="timelineTitleContent">
+                      Juillet 2025 - Septembre 2025 : Stage en développement Python
+                      Nexialog
+                    </h2>
                     <br>
                     <p class="timelineContent">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -80,8 +93,10 @@
 
                 <v-timeline-item>
                   <div>
-                    <h2 class="timelineTitleContent">Janvier 2025 - Juin 2025 : Echange Universitaire UIR Rabat
-                      Maroc</h2>
+                    <h2 class="timelineTitleContent">
+                      Janvier 2025 - Juin 2025 : Echange Universitaire UIR Rabat
+                      Maroc
+                    </h2>
                     <br>
                     <p class="timelineContent">
                       Durant cette échange j'ai eu la chande d'approfondire mes connaissance en sécurité des Réseaux et
@@ -93,7 +108,9 @@
                 </v-timeline-item>
                 <v-timeline-item>
                   <div>
-                    <h2 class="timelineTitleContent">Décembre 2024 : Découverte de la librairie Java LangChain4j</h2>
+                    <h2 class="timelineTitleContent">
+                      Décembre 2024 : Découverte de la librairie Java LangChain4j
+                    </h2>
                     <br>
                     <p class="timelineContent">
                       La librairie langChaine4j est une librairie java qui se base sur la librairie LangChain en python
@@ -105,8 +122,10 @@
                 </v-timeline-item>
                 <v-timeline-item>
                   <div>
-                    <h2 class="timelineTitleContent">Septembre 2024 - Decembre 2024: 2ème Année Bachelor Ingénérie et
-                      Cybersecurité ESILV</h2>
+                    <h2 class="timelineTitleContent">
+                      Septembre 2024 - Decembre 2024: 2ème Année Bachelor Ingénérie et
+                      Cybersecurité ESILV
+                    </h2>
                     <br>
                     <p class="timelineContent">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -118,14 +137,21 @@
             </v-card>
           </template>
 
-          <template v-slot:item.2>
+          <template #item.2>
             <v-card>
-              <v-card-title class="yearsStyleStepper">Years 2024 to 2023</v-card-title>
-              <v-timeline dot-color="#F5CB5C" align="start">
+              <v-card-title class="yearsStyleStepper">
+                Years 2024 to 2023
+              </v-card-title>
+              <v-timeline
+                dot-color="#F5CB5C"
+                align="start"
+              >
                 <v-timeline-item>
                   <div>
-                    <h2 class="timelineTitleContent">Juin 2024 - Juillet 2024 : Stage Olea Medical Développement
-                      Logiciels</h2>
+                    <h2 class="timelineTitleContent">
+                      Juin 2024 - Juillet 2024 : Stage Olea Medical Développement
+                      Logiciels
+                    </h2>
                     <br>
                     <p class="timelineContent">
                       Développer une librairie en JAVA permettant de générer des données DICOM (format/standard
@@ -137,8 +163,10 @@
                 </v-timeline-item>
                 <v-timeline-item>
                   <div>
-                    <h2 class="timelineTitleContent">Septembre 2023 - Juin 2024: 1ère Année Bachelor Ingénérie et
-                      Cybersécurité</h2>
+                    <h2 class="timelineTitleContent">
+                      Septembre 2023 - Juin 2024: 1ère Année Bachelor Ingénérie et
+                      Cybersécurité
+                    </h2>
                     <br>
                     <p class="timelineContent">
                       Durant ma première année d'école supérieur j'ais pu apprendre les bases de l'ingénérie et de
@@ -157,13 +185,20 @@
               </v-timeline>
             </v-card>
           </template>
-          <template v-slot:item.3>
+          <template #item.3>
             <v-card>
-              <v-card-title class="yearsStyleStepper">Years 2023 to 2022</v-card-title>
-              <v-timeline dot-color="#F5CB5C" align="start">
+              <v-card-title class="yearsStyleStepper">
+                Years 2023 to 2022
+              </v-card-title>
+              <v-timeline
+                dot-color="#F5CB5C"
+                align="start"
+              >
                 <v-timeline-item>
                   <div>
-                    <h2 class="timelineTitleContent">PASS TON HACK D'ABORD</h2>
+                    <h2 class="timelineTitleContent">
+                      PASS TON HACK D'ABORD
+                    </h2>
                     <p class="timelineContent">
                       Pass Ton Hack d'abord était un concours de l'Etats qui avait pour objectif de sensibilier les
                       jeunes sur la cybersécurité.
@@ -173,7 +208,9 @@
 
                 <v-timeline-item>
                   <div>
-                    <h2 class="timelineTitleContent">BAC Spécialité Maths, Physique, Maths Expert </h2>
+                    <h2 class="timelineTitleContent">
+                      BAC Spécialité Maths, Physique, Maths Expert
+                    </h2>
                     <p class="timelineContent">
                       J'ai eu mon BAC avec les spécialité Maths, Physique et Maths Expert avec mention assez bien. J'ai
                       fait mon BAC dans le lycée privée catholique Jean Paul II
@@ -186,12 +223,21 @@
         </v-stepper>
       </v-container>
 
-      <h2 class="subtitle"> Mon CV</h2>
+      <h2 class="subtitle">
+        Mon CV
+      </h2>
 
-      <v-container class="CVcontainer" fluid>
+      <v-container
+        class="CVcontainer"
+        fluid
+      >
         <v-card class="cardCV">
-          <v-card-title class="titleCV">Télécharger mon CV en un clic !</v-card-title>
-          <v-card-subtitle class="subtitleCV">Cliquez ici pour accéder au CV</v-card-subtitle>
+          <v-card-title class="titleCV">
+            Télécharger mon CV en un clic !
+          </v-card-title>
+          <v-card-subtitle class="subtitleCV">
+            Cliquez ici pour accéder au CV
+          </v-card-subtitle>
 
           <v-btn
             id="downloadCV"
@@ -199,18 +245,19 @@
             href="PETER_Gabriel.pdf"
             download
           >
-            <v-icon left>mdi-download</v-icon>
+            <v-icon left>
+              mdi-download
+            </v-icon>
             Télécharger le fichier
           </v-btn>
 
           <div class="vf-file-preview-pdf-container">
             <iframe
               class="vf-file-preview-pdf"
-              src="../../PETER_Gabriel.pdf"
+              src="PETER_Gabriel.pdf"
               type="application/pdf"
-            ></iframe>
+            />
           </div>
-
         </v-card>
       </v-container>
     </v-app>
