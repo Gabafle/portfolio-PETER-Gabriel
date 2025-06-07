@@ -281,7 +281,7 @@ import DefaultLayout from "@/components/defaultLayout.vue";
 .subtitle {
   max-width: 100%;
   max-height: 100%;
-  background-image: url("../../public/section.png");
+  background-image: url("section.png");
   color: #F5CB5C;
   text-align: center;
   font-size: 200%;
