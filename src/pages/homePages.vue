@@ -621,7 +621,7 @@ const itemsParallax = ref([
 
 .styleSection {
   max-width: 100%;
-  background-image: url("section.png");
+  background-image: url("../../section.png");
   color: #F5CB5C;
   text-align: center;
   font-size: 200%;
