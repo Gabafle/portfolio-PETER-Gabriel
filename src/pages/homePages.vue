@@ -1,37 +1,63 @@
 <template>
   <DefaultLayout>
     <v-app class="contentPage">
-
-      <v-container class="pa-0" fluid>
+      <v-container
+        class="pa-0"
+        fluid
+      >
         <v-carousel
           show-arrows
           height="auto"
-          class="responsive-carousel">
+          class="responsive-carousel"
+        >
           <v-carousel-item
             v-for="(itemParalax, index) in itemsParallax"
-            :key="index">
+            :key="index"
+          >
             <v-parallax
               :src="itemParalax"
               class="parallax-image"
-              height="auto">
-
-            </v-parallax>
+              height="auto"
+            />
           </v-carousel-item>
         </v-carousel>
       </v-container>
 
-      <v-container class="cardPresentation" max-width="88%" fluid>
-        <v-row align="center" justify="center" class="flex-column flex-md-row">
-
-          <v-col cols="12" md="4" class="d-flex justify-center mb-4 mb-md-0">
-            <v-img width="100%" max-width="300" src="@/assets/ghibly.png"></v-img>
+      <v-container
+        class="cardPresentation"
+        max-width="88%"
+        fluid
+      >
+        <v-row
+          align="center"
+          justify="center"
+          class="flex-column flex-md-row"
+        >
+          <v-col
+            cols="12"
+            md="4"
+            class="d-flex justify-center mb-4 mb-md-0"
+          >
+            <v-img
+              width="100%"
+              max-width="300"
+              src="@/assets/ghibly.png"
+            />
           </v-col>
 
 
-          <v-col cols="12" md="8">
-            <v-card elevation="2" class="pa-4">
+          <v-col
+            cols="12"
+            md="8"
+          >
+            <v-card
+              elevation="2"
+              class="pa-4"
+            >
               <div class="d-flex flex-column">
-                <v-card-title class="cardTitle">Gabriel PETER</v-card-title>
+                <v-card-title class="cardTitle">
+                  Gabriel PETER
+                </v-card-title>
                 <v-card-subtitle>About Me</v-card-subtitle>
                 <v-card-text class="cardTextContent">
                   <em>"Ce qui se conçoit bien s'énonce clairement et les mots pour le dire arrivent aisément - <b>Nicolas
@@ -70,7 +96,12 @@
                 </v-card-text>
 
                 <div class="d-flex justify-center mt-2">
-                  <v-btn to="/monProfil" class="buttonProfil">See More</v-btn>
+                  <v-btn
+                    to="/monProfil"
+                    class="buttonProfil"
+                  >
+                    See More
+                  </v-btn>
                 </div>
               </div>
             </v-card>
@@ -79,11 +110,16 @@
       </v-container>
 
       <v-container>
-        <h2 class="styleSection">My Production</h2>
+        <h2 class="styleSection">
+          My Production
+        </h2>
         <v-sheet class="sheetProduction">
           <v-card class="productionCard">
-            <v-card-title class="titleProject">PortFolio</v-card-title>
-            <v-card-text class="descriptionProject">Ce projet fut le premier projets que j'ai réaliser tout seul sans
+            <v-card-title class="titleProject">
+              PortFolio
+            </v-card-title>
+            <v-card-text class="descriptionProject">
+              Ce projet fut le premier projets que j'ai réaliser tout seul sans
               directive.
               Je trouvais pertinant et interressant de travailler le développement web et l'utilisation des framWork
               comme Vue et Vuetify.
@@ -91,121 +127,194 @@
               HTML et le CSS.
             </v-card-text>
 
-            <v-divider></v-divider>
+            <v-divider />
             <v-chip-group class="groupChip">
-              <v-chip class="chipItem">Vue</v-chip>
-              <v-chip class="chipItem">Vuetify</v-chip>
-              <v-chip class="chipItem">TypeScript</v-chip>
-              <v-chip class="chipItem">JavaScript</v-chip>
-              <v-chip class="chipItem">HTML</v-chip>
-              <v-chip class="chipItem">CSS</v-chip>
+              <v-chip class="chipItem">
+                Vue
+              </v-chip>
+              <v-chip class="chipItem">
+                Vuetify
+              </v-chip>
+              <v-chip class="chipItem">
+                TypeScript
+              </v-chip>
+              <v-chip class="chipItem">
+                JavaScript
+              </v-chip>
+              <v-chip class="chipItem">
+                HTML
+              </v-chip>
+              <v-chip class="chipItem">
+                CSS
+              </v-chip>
             </v-chip-group>
             <v-btn
               variant="elevated"
               prepend-icon="mdi-github"
               href="https://github.com/Gabafle/PortFolio-PETER-Gabriel.git"
               target="_blank"
-              class="btnCodeSource">
+              class="btnCodeSource"
+            >
               Code source
             </v-btn>
           </v-card>
           <v-card class="productionCard">
-
             <div class="titleArea">
-              <v-card-title class="titleProject">Générateur de fantome d'image d'IRM, DICOM</v-card-title>
+              <v-card-title class="titleProject">
+                Générateur de fantome d'image d'IRM, DICOM
+              </v-card-title>
               <v-tooltip text="Confidential">
-                <template v-slot:activator="{ props }">
-                  <v-icon v-bind="props" class="statutProjectPrivate">mdi-badge-account</v-icon>
+                <template #activator="{ props }">
+                  <v-icon
+                    v-bind="props"
+                    class="statutProjectPrivate"
+                  >
+                    mdi-badge-account
+                  </v-icon>
                 </template>
               </v-tooltip>
             </div>
 
-            <v-card-text class="descriptionProject">L'objectifs de ce projets était de réaliser une librairie interne à
+            <v-card-text class="descriptionProject">
+              L'objectifs de ce projets était de réaliser une librairie interne à
               l'entreprise en java avec en plus une interface CLI et web.
               Cette librairie devait généré des images d'irm sous le modèle DICOM pour les testes par rapport à des
               caractéristiques donner par l'utilisateur.
             </v-card-text>
 
-            <v-divider></v-divider>
+            <v-divider />
             <v-chip-group class="groupChip">
-              <v-chip class="chipItem">Java</v-chip>
-              <v-chip class="chipItem">Spring boot</v-chip>
-              <v-chip class="chipItem">DCM4CHE</v-chip>
-              <v-chip class="chipItem">Vue</v-chip>
-              <v-chip class="chipItem">Vuetify</v-chip>
-              <v-chip class="chipItem">JavaScript</v-chip>
-              <v-chip class="chipItem">Maven</v-chip>
-              <v-chip class="chipItem">Sonar</v-chip>
-              <v-chip class="chipItem">git</v-chip>
+              <v-chip class="chipItem">
+                Java
+              </v-chip>
+              <v-chip class="chipItem">
+                Spring boot
+              </v-chip>
+              <v-chip class="chipItem">
+                DCM4CHE
+              </v-chip>
+              <v-chip class="chipItem">
+                Vue
+              </v-chip>
+              <v-chip class="chipItem">
+                Vuetify
+              </v-chip>
+              <v-chip class="chipItem">
+                JavaScript
+              </v-chip>
+              <v-chip class="chipItem">
+                Maven
+              </v-chip>
+              <v-chip class="chipItem">
+                Sonar
+              </v-chip>
+              <v-chip class="chipItem">
+                git
+              </v-chip>
             </v-chip-group>
           </v-card>
 
           <v-card class="productionCard">
             <div class="titleArea">
-              <v-card-title class="titleProject">Création d'un Scanner LIDAR 3D</v-card-title>
+              <v-card-title class="titleProject">
+                Création d'un Scanner LIDAR 3D
+              </v-card-title>
               <v-tooltip text="Scholar issues">
-                <template v-slot:activator="{ props }">
-                  <v-icon v-bind="props">mdi-account-school</v-icon>
+                <template #activator="{ props }">
+                  <v-icon v-bind="props">
+                    mdi-account-school
+                  </v-icon>
                 </template>
               </v-tooltip>
             </div>
-            <v-card-text class="descriptionProject">Ce projet d'étude avait pour objectifs d'être capable de scanner une
+            <v-card-text class="descriptionProject">
+              Ce projet d'étude avait pour objectifs d'être capable de scanner une
               pièce et de la modéliser en 3D sur python.
               Récupération des données via un capteur Lidar point par point, Stockage des données dans une carte SD,
               Modélisation et traitement sur ordinateur des données avec python.
             </v-card-text>
 
-            <v-divider></v-divider>
+            <v-divider />
             <v-chip-group class="groupChip">
-              <v-chip class="chipItem">Electronique</v-chip>
-              <v-chip class="chipItem">LIDAR</v-chip>
-              <v-chip class="chipItem">Python</v-chip>
-              <v-chip class="chipItem">Soudure</v-chip>
-              <v-chip class="chipItem">Moteur pas à pas</v-chip>
-              <v-chip class="chipItem">Arduino</v-chip>
+              <v-chip class="chipItem">
+                Electronique
+              </v-chip>
+              <v-chip class="chipItem">
+                LIDAR
+              </v-chip>
+              <v-chip class="chipItem">
+                Python
+              </v-chip>
+              <v-chip class="chipItem">
+                Soudure
+              </v-chip>
+              <v-chip class="chipItem">
+                Moteur pas à pas
+              </v-chip>
+              <v-chip class="chipItem">
+                Arduino
+              </v-chip>
             </v-chip-group>
-
           </v-card>
 
           <v-card class="productionCard">
             <div class="titleArea">
-              <v-card-title class="titleProject">Création d'un Questionnaire PHP</v-card-title>
+              <v-card-title class="titleProject">
+                Création d'un Questionnaire PHP
+              </v-card-title>
               <v-tooltip text="Scholar issues">
-                <template v-slot:activator="{ props }">
-                  <v-icon v-bind="props">mdi-account-school</v-icon>
+                <template #activator="{ props }">
+                  <v-icon v-bind="props">
+                    mdi-account-school
+                  </v-icon>
                 </template>
               </v-tooltip>
             </div>
-            <v-card-text class="descriptionProject">L'objectifs e ce projets d'étude était de faire un site en php avec
+            <v-card-text class="descriptionProject">
+              L'objectifs e ce projets d'étude était de faire un site en php avec
               gestion des accès, login et création de compte.
               Ce projets utilisait phpAdmin pour géré la base de données.
             </v-card-text>
 
-            <v-divider></v-divider>
+            <v-divider />
             <v-chip-group class="groupChip">
-              <v-chip class="chipItem">PHP</v-chip>
-              <v-chip class="chipItem">SQL</v-chip>
-              <v-chip class="chipItem">PhpAdmin</v-chip>
-              <v-chip class="chipItem">HTML</v-chip>
-              <v-chip class="chipItem">CSS</v-chip>
+              <v-chip class="chipItem">
+                PHP
+              </v-chip>
+              <v-chip class="chipItem">
+                SQL
+              </v-chip>
+              <v-chip class="chipItem">
+                PhpAdmin
+              </v-chip>
+              <v-chip class="chipItem">
+                HTML
+              </v-chip>
+              <v-chip class="chipItem">
+                CSS
+              </v-chip>
             </v-chip-group>
             <v-btn
               variant="elevated"
               prepend-icon="mdi-github"
               href="https://github.com/mickTa/PHP-Project.git"
               target="_blank"
-              class="btnCodeSource">
+              class="btnCodeSource"
+            >
               Code source
             </v-btn>
-
           </v-card>
 
           <v-card class="productionCard">
             <div class="titleArea">
-              <v-card-title class="titleProject">API RestFull</v-card-title>
+              <v-card-title class="titleProject">
+                API RestFull
+              </v-card-title>
               <v-tooltip text="Scholar issues">
-                <template v-slot:activator="{ props }">
-                  <v-icon v-bind="props">mdi-account-school</v-icon>
+                <template #activator="{ props }">
+                  <v-icon v-bind="props">
+                    mdi-account-school
+                  </v-icon>
                 </template>
               </v-tooltip>
             </div>
@@ -214,28 +323,33 @@
               Ce projet avait pour objectifs de réaliser une API rest full qui gère des articles, et des utilisateurs.
             </v-card-text>
 
-            <v-divider></v-divider>
+            <v-divider />
             <v-chip-group class="groupChip">
-              <v-chip class="chipItem">Javascript</v-chip>
-
+              <v-chip class="chipItem">
+                Javascript
+              </v-chip>
             </v-chip-group>
             <v-btn
               variant="elevated"
               prepend-icon="mdi-github"
               href="https://github.com/Gabafle/ESILV-Projet-DevWeb-Backend.git"
               target="_blank"
-              class="btnCodeSource">
+              class="btnCodeSource"
+            >
               Code source
             </v-btn>
-
           </v-card>
 
           <v-card class="productionCard">
             <div class="titleArea">
-              <v-card-title class="titleProject"> Pipline Kafka ElasticSearch Kibana</v-card-title>
+              <v-card-title class="titleProject">
+                Pipline Kafka ElasticSearch Kibana
+              </v-card-title>
               <v-tooltip text="Scholar issues">
-                <template v-slot:activator="{ props }">
-                  <v-icon v-bind="props">mdi-account-school</v-icon>
+                <template #activator="{ props }">
+                  <v-icon v-bind="props">
+                    mdi-account-school
+                  </v-icon>
                 </template>
               </v-tooltip>
             </div>
@@ -246,33 +360,48 @@
               Ces données était après utiliser pour créé des graphiques sur ElasticSearch.
             </v-card-text>
 
-            <v-divider></v-divider>
+            <v-divider />
             <v-chip-group class="groupChip">
-              <v-chip class="chipItem">Docker</v-chip>
-              <v-chip class="chipItem">Python</v-chip>
-              <v-chip class="chipItem">OpenWeather API</v-chip>
-              <v-chip class="chipItem">ElasticSearch</v-chip>
-              <v-chip class="chipItem">Kibana</v-chip>
-              <v-chip class="chipItem">Kafka</v-chip>
-
+              <v-chip class="chipItem">
+                Docker
+              </v-chip>
+              <v-chip class="chipItem">
+                Python
+              </v-chip>
+              <v-chip class="chipItem">
+                OpenWeather API
+              </v-chip>
+              <v-chip class="chipItem">
+                ElasticSearch
+              </v-chip>
+              <v-chip class="chipItem">
+                Kibana
+              </v-chip>
+              <v-chip class="chipItem">
+                Kafka
+              </v-chip>
             </v-chip-group>
             <v-btn
               variant="elevated"
               prepend-icon="mdi-github"
               href="https://github.com/Gabafle/-UIR-Big-Data-Project-PipeLine-Kafka.git"
               target="_blank"
-              class="btnCodeSource">
+              class="btnCodeSource"
+            >
               Code source
             </v-btn>
-
           </v-card>
 
           <v-card class="productionCard">
             <div class="titleArea">
-              <v-card-title class="titleProject">Site Web Responsive</v-card-title>
+              <v-card-title class="titleProject">
+                Site Web Responsive
+              </v-card-title>
               <v-tooltip text="Scholar issues">
-                <template v-slot:activator="{ props }">
-                  <v-icon v-bind="props">mdi-account-school</v-icon>
+                <template #activator="{ props }">
+                  <v-icon v-bind="props">
+                    mdi-account-school
+                  </v-icon>
                 </template>
               </v-tooltip>
             </div>
@@ -282,90 +411,122 @@
               Ce projet fut ma première fois dans le développement Web
             </v-card-text>
 
-            <v-divider></v-divider>
+            <v-divider />
             <v-chip-group class="groupChip">
-              <v-chip class="chipItem">HTML</v-chip>
-              <v-chip class="chipItem">CSS</v-chip>
-
+              <v-chip class="chipItem">
+                HTML
+              </v-chip>
+              <v-chip class="chipItem">
+                CSS
+              </v-chip>
             </v-chip-group>
           </v-card>
 
           <h2> Project In Progress</h2>
-          <v-divider></v-divider>
+          <v-divider />
 
           <v-card class="productionCard">
             <div class="titleArea">
-              <v-card-title class="titleProject">Cauchemars</v-card-title>
+              <v-card-title class="titleProject">
+                Cauchemars
+              </v-card-title>
               <v-tooltip text="In progress">
-                <template v-slot:activator="{ props }">
-                  <v-icon v-bind="props" class="statutProjectInProgress">mdi-tools</v-icon>
+                <template #activator="{ props }">
+                  <v-icon
+                    v-bind="props"
+                    class="statutProjectInProgress"
+                  >
+                    mdi-tools
+                  </v-icon>
                 </template>
-
               </v-tooltip>
-
             </div>
 
-            <v-card-text class="descriptionProject">Cauchemars est un projet de jeux vidéo indépendant en collaborations
+            <v-card-text class="descriptionProject">
+              Cauchemars est un projet de jeux vidéo indépendant en collaborations
               avec une équipe d'une disaine de personne.
               Présider par "Palatops" ce projet de jeux indépendant à pour vocation d'être un jeux plateforme 2D.
             </v-card-text>
 
-            <v-divider></v-divider>
+            <v-divider />
             <v-chip-group class="groupChip">
-              <v-chip class="chipItem">C#</v-chip>
-              <v-chip class="chipItem">Godot</v-chip>
+              <v-chip class="chipItem">
+                C#
+              </v-chip>
+              <v-chip class="chipItem">
+                Godot
+              </v-chip>
             </v-chip-group>
             <v-btn
               variant="elevated"
               prepend-icon="mdi-github"
               href="#"
               target="_blank"
-              class="btnCodeSource">
+              class="btnCodeSource"
+            >
               Code source
             </v-btn>
           </v-card>
           <v-card class="productionCard">
             <div class="titleArea">
-              <v-card-title class="titleProject">Implementation ToDo ist Notion</v-card-title>
+              <v-card-title class="titleProject">
+                Implementation ToDo ist Notion
+              </v-card-title>
 
               <v-tooltip text="In progress">
-                <template v-slot:activator="{ props }">
-                  <v-icon v-bind="props" class="statutProjectInProgress">mdi-tools</v-icon>
+                <template #activator="{ props }">
+                  <v-icon
+                    v-bind="props"
+                    class="statutProjectInProgress"
+                  >
+                    mdi-tools
+                  </v-icon>
                 </template>
               </v-tooltip>
             </div>
 
-            <v-card-text class="descriptionProject">Ce projet a pour but de permettre une connections de deux logiciels
+            <v-card-text class="descriptionProject">
+              Ce projet a pour but de permettre une connections de deux logiciels
               de productivité, Notion et TodoIst.
               L'objectifs est de permettre la visualisation et l'actualisation des taches TodoIst sur Notion et de
               permettre des visualisations Notion des Taches.
             </v-card-text>
 
-            <v-divider></v-divider>
+            <v-divider />
             <v-chip-group class="groupChip">
-              <v-chip class="chipItem">C#</v-chip>
-              <v-chip class="chipItem">API Notion</v-chip>
-              <v-chip class="chipItem">Api TodoIst</v-chip>
+              <v-chip class="chipItem">
+                C#
+              </v-chip>
+              <v-chip class="chipItem">
+                API Notion
+              </v-chip>
+              <v-chip class="chipItem">
+                Api TodoIst
+              </v-chip>
             </v-chip-group>
             <v-btn
               variant="elevated"
               prepend-icon="mdi-github"
               href="https://github.com/Gabafle/ImplementationToDoIstNotion.git"
               target="_blank"
-              class="btnCodeSource">
+              class="btnCodeSource"
+            >
               Code source
             </v-btn>
           </v-card>
 
           <h2> Next Project</h2>
-          <v-divider></v-divider>
+          <v-divider />
 
           <v-card class="productionCard">
             <div class="titleArea">
-              <v-card-title class="titleProject">DataCleaner</v-card-title>
+              <v-card-title class="titleProject">
+                DataCleaner
+              </v-card-title>
             </div>
 
-            <v-card-text class="descriptionProject">Ce projet à pour vocation de normaliser selon des formats de données
+            <v-card-text class="descriptionProject">
+              Ce projet à pour vocation de normaliser selon des formats de données
               donné par l'utilisateur des grandes bases.
               les bases de données pourrons être de plusieurs format différent, SQL, json ,txt, xml ,... Les format de
               données pourront idéalement être les formats de données établit à l'international ou dans une entreprise
@@ -374,44 +535,60 @@
               de IA.
             </v-card-text>
 
-            <v-divider></v-divider>
+            <v-divider />
             <v-chip-group class="groupChip">
-              <v-chip class="chipItem">Java</v-chip>
-              <v-chip class="chipItem">Python</v-chip>
-              <v-chip class="chipItem">SQL</v-chip>
-              <v-chip class="chipItem">IA</v-chip>
-              <v-chip class="chipItem">...</v-chip>
+              <v-chip class="chipItem">
+                Java
+              </v-chip>
+              <v-chip class="chipItem">
+                Python
+              </v-chip>
+              <v-chip class="chipItem">
+                SQL
+              </v-chip>
+              <v-chip class="chipItem">
+                IA
+              </v-chip>
+              <v-chip class="chipItem">
+                ...
+              </v-chip>
             </v-chip-group>
           </v-card>
 
           <v-card class="productionCard">
             <div class="titleArea">
-              <v-card-title class="titleProject">Algorithme de Résolution du Jeux Vidéo Marciac's Pocket Festival
+              <v-card-title class="titleProject">
+                Algorithme de Résolution du Jeux Vidéo Marciac's Pocket Festival
               </v-card-title>
             </div>
 
             <v-card-text class="descriptionProject">
               Ce projet a pour but de résoudre un jeux vidéo indépendant nommé Marciac's Pocket Festival et de donner le meilleur score possible.
-
             </v-card-text>
 
             <v-divider></v-divider>
             <v-chip-group class="groupChip">
-              <v-chip class="chipItem">Python</v-chip>
-              <v-chip class="chipItem">Pytest</v-chip>
-              <v-chip class="chipItem">Reinforcement Learning</v-chip>
-              <v-chip class="chipItem">IA</v-chip>
-              <v-chip class="chipItem">...</v-chip>
+              <v-chip class="chipItem">
+                Python
+              </v-chip>
+              <v-chip class="chipItem">
+                Pytest
+              </v-chip>
+              <v-chip class="chipItem">
+                Reinforcement Learning
+              </v-chip>
+              <v-chip class="chipItem">
+                IA
+              </v-chip>
+              <v-chip class="chipItem">
+                ...
+              </v-chip>
             </v-chip-group>
-
           </v-card>
-
         </v-sheet>
       </v-container>
-
     </v-app>
   </DefaultLayout>
-
 </template>
 
 <script lang="ts" setup>
