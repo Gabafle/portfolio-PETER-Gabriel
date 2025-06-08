@@ -93,6 +93,13 @@
                     <li> Jeux de société</li>
                     <li> Echec</li>
                   </ul>
+                  <h3> Mes Association </h3>
+                  <ul class="ma-lg-5">
+                    <li>Digiteam : Digiteam est une association de réparation des ordinateurs pour les étudiants du pôle Léonard de Vinci.
+                      Dans cette association, j'ai eu l'opportunité d'apprendre comment réparer et monter un ordinateur ou réglé quelques problèmes Software.
+                    </li>
+                    <li>Game Of Devinci : Game Of Devinci est une association de jeux de société et jeux de rôles. Durant ma première année, j'ai rejoint cette association pour conquérir les terres sombres du MorDor.</li>
+                  </ul>
                 </v-card-text>
 
                 <div class="d-flex justify-center mt-2">
@@ -610,7 +617,7 @@ const itemsParallax = ref([
 }
 
 .responsive-carousel {
-  max-height: 100vh;
+  max-height: 80vh;
 }
 
 .styleSection {
