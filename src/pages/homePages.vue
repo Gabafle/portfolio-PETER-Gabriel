@@ -93,8 +93,8 @@
                     <li> Jeux de société</li>
                     <li> Echec</li>
                   </ul>
-                  <h3> Mes Association </h3>
-                  <ul class="ma-lg-5">
+                  <h3>🔖 Mes Association </h3>
+                  <ul >
                     <li>Digiteam : Digiteam est une association de réparation des ordinateurs pour les étudiants du pôle Léonard de Vinci.
                       Dans cette association, j'ai eu l'opportunité d'apprendre comment réparer et monter un ordinateur ou réglé quelques problèmes Software.
                     </li>
