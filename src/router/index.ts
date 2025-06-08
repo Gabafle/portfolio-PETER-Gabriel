@@ -15,6 +15,17 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory('/portfolio-PETER-Gabriel/'),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'instant',
+      };
+    }
+    return { top: 0 };
+  }
 })
+
+
 
 export default router

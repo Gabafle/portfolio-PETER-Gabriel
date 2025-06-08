@@ -59,7 +59,7 @@
 
             <br>
             <p>
-              <em>Si vous voulez en savoir plus ou accéder à mon CV c'est par <a href="#downloadCV">ici !</a> </em>
+              <em>Si vous voulez en savoir plus ou accéder à mon CV c'est par <a href="#" @click.prevent="scrollToCV">ici !</a> </em>
             </p>
           </v-card-text>
         </v-card>
@@ -220,7 +220,7 @@
         </v-stepper>
       </v-container>
 
-      <h2 class="subtitle">
+      <h2  id="downloadCV" class="subtitle">
         Mon CV
       </h2>
 
@@ -237,7 +237,7 @@
           </v-card-subtitle>
 
           <v-btn
-            id="downloadCV"
+
             class="btnDownload"
             href="PETER_Gabriel.pdf"
             download
@@ -263,6 +263,14 @@
 <script lang="ts" setup>
 
 import DefaultLayout from "@/components/defaultLayout.vue";
+
+
+function scrollToCV() {
+  const element = document.getElementById('downloadCV');
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 
 </script>
 

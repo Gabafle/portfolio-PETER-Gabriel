@@ -93,6 +93,7 @@
                     <li> Jeux de société</li>
                     <li> Echec</li>
                   </ul>
+                  <br>
                   <h3>🔖 Mes Association </h3>
                   <ul >
                     <li>Digiteam : Digiteam est une association de réparation des ordinateurs pour les étudiants du pôle Léonard de Vinci.
@@ -100,6 +101,10 @@
                     </li>
                     <li>Game Of Devinci : Game Of Devinci est une association de jeux de société et jeux de rôles. Durant ma première année, j'ai rejoint cette association pour conquérir les terres sombres du MorDor.</li>
                   </ul>
+                  <br>
+                  <em>Si vous voulez en savoir plus ou accéder à mon CV c'est par <router-link :to="{ path: '/monProfil', hash: '#downloadCV' }">
+                    ici !
+                  </router-link> </em>
                 </v-card-text>
 
                 <div class="d-flex justify-center mt-2">
