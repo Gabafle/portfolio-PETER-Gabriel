@@ -699,7 +699,7 @@ const itemsParallax = ref([
   background-color: #f4db87;
   color: black;
   font-weight: bold;
-  font-size: clamp(8px, 2vw, 25px);
+  font-size: clamp(8px, 1vw, 15px);
   white-space: normal;
   word-break: break-word;
 }
