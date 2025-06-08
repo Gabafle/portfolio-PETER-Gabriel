@@ -115,19 +115,18 @@
         </h2>
         <v-sheet class="sheetProduction">
           <v-card class="productionCard">
-            <v-card-title class="titleProject">
-              PortFolio
-            </v-card-title>
+            <div class="titleProject">
+              <h4>PortFolio</h4>
+            </div>
             <v-card-text class="descriptionProject">
-              Ce projet fut le premier projets que j'ai réaliser tout seul sans
-              directive.
-              Je trouvais pertinant et interressant de travailler le développement web et l'utilisation des framWork
+              Ce projet fut une première expérience que j'ai réalisée seul sans directive.
+              Je trouvais pertinent et intéressant de travailler le développement web et l'utilisation des framework
               comme Vue et Vuetify.
-              Ce projet m'a également permis d'améliorer ma maitrise des langages comme le Javascript, le Typescript,
+              Ce projet m'a également permis d'améliorer ma maîtrise des langages comme le Javascript, le Typescript,
               HTML et le CSS.
             </v-card-text>
 
-            <v-divider />
+            <v-divider/>
             <v-chip-group class="groupChip">
               <v-chip class="chipItem">
                 Vue
@@ -160,9 +159,9 @@
           </v-card>
           <v-card class="productionCard">
             <div class="titleArea">
-              <v-card-title class="titleProject">
-                Générateur de fantome d'image d'IRM, DICOM
-              </v-card-title>
+              <div class="titleProject">
+                <h4>Générateur de fantome d'image d'IRM, DICOM</h4>
+              </div>
               <v-tooltip text="Confidential">
                 <template #activator="{ props }">
                   <v-icon
@@ -176,13 +175,13 @@
             </div>
 
             <v-card-text class="descriptionProject">
-              L'objectifs de ce projets était de réaliser une librairie interne à
-              l'entreprise en java avec en plus une interface CLI et web.
-              Cette librairie devait généré des images d'irm sous le modèle DICOM pour les testes par rapport à des
-              caractéristiques donner par l'utilisateur.
+              L'objectif de ce projet était de réaliser une librairie interne à l'entreprise en java avec en plus une
+              interface CLI et web.
+              Cette librairie devait générer des images d'IRM sous le modèle DICOM pour les tests par rapport à
+              des caractéristiques donner par l'utilisateur.
             </v-card-text>
 
-            <v-divider />
+            <v-divider/>
             <v-chip-group class="groupChip">
               <v-chip class="chipItem">
                 Java
@@ -216,9 +215,9 @@
 
           <v-card class="productionCard">
             <div class="titleArea">
-              <v-card-title class="titleProject">
+              <div class="titleProject">
                 Création d'un Scanner LIDAR 3D
-              </v-card-title>
+              </div>
               <v-tooltip text="Scholar issues">
                 <template #activator="{ props }">
                   <v-icon v-bind="props">
@@ -234,7 +233,7 @@
               Modélisation et traitement sur ordinateur des données avec python.
             </v-card-text>
 
-            <v-divider />
+            <v-divider/>
             <v-chip-group class="groupChip">
               <v-chip class="chipItem">
                 Electronique
@@ -259,9 +258,9 @@
 
           <v-card class="productionCard">
             <div class="titleArea">
-              <v-card-title class="titleProject">
-                Création d'un Questionnaire PHP
-              </v-card-title>
+              <div class="titleProject">
+                <h4>Création d'un Questionnaire PHP</h4>
+              </div>
               <v-tooltip text="Scholar issues">
                 <template #activator="{ props }">
                   <v-icon v-bind="props">
@@ -271,12 +270,12 @@
               </v-tooltip>
             </div>
             <v-card-text class="descriptionProject">
-              L'objectifs e ce projets d'étude était de faire un site en php avec
-              gestion des accès, login et création de compte.
-              Ce projets utilisait phpAdmin pour géré la base de données.
+              L'objectif de ce projet d'étude était de faire un site en php avec gestion des accès, login et création de
+              compte.
+              Ce projet utilisait phpMyAdmin pour géré la base de données.
             </v-card-text>
 
-            <v-divider />
+            <v-divider/>
             <v-chip-group class="groupChip">
               <v-chip class="chipItem">
                 PHP
@@ -307,9 +306,9 @@
 
           <v-card class="productionCard">
             <div class="titleArea">
-              <v-card-title class="titleProject">
-                API RestFull
-              </v-card-title>
+              <div class="titleProject">
+                <h4>API RestFull</h4>
+              </div>
               <v-tooltip text="Scholar issues">
                 <template #activator="{ props }">
                   <v-icon v-bind="props">
@@ -320,10 +319,10 @@
             </div>
 
             <v-card-text class="descriptionProject">
-              Ce projet avait pour objectifs de réaliser une API rest full qui gère des articles, et des utilisateurs.
+              Ce projet avait pour objectif de réaliser une API Rest-Full qui gère des articles, et des utilisateurs.
             </v-card-text>
 
-            <v-divider />
+            <v-divider/>
             <v-chip-group class="groupChip">
               <v-chip class="chipItem">
                 Javascript
@@ -342,9 +341,9 @@
 
           <v-card class="productionCard">
             <div class="titleArea">
-              <v-card-title class="titleProject">
-                Pipline Kafka ElasticSearch Kibana
-              </v-card-title>
+              <div class="titleProject">
+                <h4>Pipline Kafka ElasticSearch Kibana</h4>
+              </div>
               <v-tooltip text="Scholar issues">
                 <template #activator="{ props }">
                   <v-icon v-bind="props">
@@ -355,12 +354,11 @@
             </div>
 
             <v-card-text class="descriptionProject">
-              Ce projet avait pour objectifs de réaliser un Pipe Line Kafka qui récupérer des données de qualité de
-              l'airs de plusieurs grandes villes via l'API OpenWeather.
-              Ces données était après utiliser pour créé des graphiques sur ElasticSearch.
+              Ce projet avait pour objectif de réaliser un Pipe Line Kafka qui récupérait des données de qualité de l'air de plusieurs grandes villes via l'API OpenWeather.
+              L'utilisation de ces données permettait la création de graphique sur ElasticSearch.
             </v-card-text>
 
-            <v-divider />
+            <v-divider/>
             <v-chip-group class="groupChip">
               <v-chip class="chipItem">
                 Docker
@@ -394,9 +392,9 @@
 
           <v-card class="productionCard">
             <div class="titleArea">
-              <v-card-title class="titleProject">
+              <div class="titleProject">
                 Site Web Responsive
-              </v-card-title>
+              </div>
               <v-tooltip text="Scholar issues">
                 <template #activator="{ props }">
                   <v-icon v-bind="props">
@@ -411,7 +409,7 @@
               Ce projet fut ma première fois dans le développement Web
             </v-card-text>
 
-            <v-divider />
+            <v-divider/>
             <v-chip-group class="groupChip">
               <v-chip class="chipItem">
                 HTML
@@ -423,13 +421,13 @@
           </v-card>
 
           <h2> Project In Progress</h2>
-          <v-divider />
+          <v-divider/>
 
           <v-card class="productionCard">
             <div class="titleArea">
-              <v-card-title class="titleProject">
-                Cauchemars
-              </v-card-title>
+              <div class="titleProject">
+                <h4>Cauchemars</h4>
+              </div>
               <v-tooltip text="In progress">
                 <template #activator="{ props }">
                   <v-icon
@@ -443,12 +441,11 @@
             </div>
 
             <v-card-text class="descriptionProject">
-              Cauchemars est un projet de jeux vidéo indépendant en collaborations
-              avec une équipe d'une disaine de personne.
-              Présider par "Palatops" ce projet de jeux indépendant à pour vocation d'être un jeux plateforme 2D.
+              Cauchemars est un projet de jeux vidéo indépendant en collaborations avec une équipe d'une dizaine de personne.
+              Présider par "Palatops" ce projet de jeux indépendant a pour vocation d'être un jeu plateforme 2D.
             </v-card-text>
 
-            <v-divider />
+            <v-divider/>
             <v-chip-group class="groupChip">
               <v-chip class="chipItem">
                 C#
@@ -469,9 +466,9 @@
           </v-card>
           <v-card class="productionCard">
             <div class="titleArea">
-              <v-card-title class="titleProject">
-                Implementation ToDo ist Notion
-              </v-card-title>
+              <div class="titleProject">
+               <h4> Implementation ToDo ist Notion</h4>
+              </div>
 
               <v-tooltip text="In progress">
                 <template #activator="{ props }">
@@ -486,13 +483,11 @@
             </div>
 
             <v-card-text class="descriptionProject">
-              Ce projet a pour but de permettre une connections de deux logiciels
-              de productivité, Notion et TodoIst.
-              L'objectifs est de permettre la visualisation et l'actualisation des taches TodoIst sur Notion et de
-              permettre des visualisations Notion des Taches.
+              Ce projet a pour but de permettre une connections de deux logiciels de productivité, Notion et TodoIst.
+              L'objectif est de permettre la visualisation et l'actualisation des taches TodoIst sur Notion et de permettre des visualisations Notion des Taches.
             </v-card-text>
 
-            <v-divider />
+            <v-divider/>
             <v-chip-group class="groupChip">
               <v-chip class="chipItem">
                 C#
@@ -516,26 +511,24 @@
           </v-card>
 
           <h2> Next Project</h2>
-          <v-divider />
+          <v-divider/>
 
           <v-card class="productionCard">
             <div class="titleArea">
-              <v-card-title class="titleProject">
-                DataCleaner
-              </v-card-title>
+              <div class="titleProject">
+               <h4> DataCleaner</h4>
+              </div>
             </div>
 
             <v-card-text class="descriptionProject">
-              Ce projet à pour vocation de normaliser selon des formats de données
-              donné par l'utilisateur des grandes bases.
-              les bases de données pourrons être de plusieurs format différent, SQL, json ,txt, xml ,... Les format de
-              données pourront idéalement être les formats de données établit à l'international ou dans une entreprise
-              pour l'échange de données.
-              Il serait donc possible de créé des formats de données pour après faire le nettoyage grâçe à la puissance
-              de IA.
+              Ce projet a pour vocation de normaliser selon des formats de données par l'utilisateur, des grandes bases de données.
+              Les bases de données pourront être de plusieurs formats différents, SQL, json ,txt, xml ,...
+              Les formats de données pourront idéalement être les formats de données établies à l'international ou dans une entreprise pour l'échange de données.
+              Il serait donc possible de créer des formats de données pour après faire le nettoyage grâce à la puissance.
+              de l'IA.
             </v-card-text>
 
-            <v-divider />
+            <v-divider/>
             <v-chip-group class="groupChip">
               <v-chip class="chipItem">
                 Java
@@ -557,13 +550,13 @@
 
           <v-card class="productionCard">
             <div class="titleArea">
-              <v-card-title class="titleProject">
-                Algorithme de Résolution du Jeux Vidéo Marciac's Pocket Festival
-              </v-card-title>
+              <div class="titleProject">
+                <h4>Algorithme de Résolution du Jeux Vidéo Marciac's Pocket Festival </h4>
+              </div>
             </div>
 
             <v-card-text class="descriptionProject">
-              Ce projet a pour but de résoudre un jeux vidéo indépendant nommé Marciac's Pocket Festival et de donner le meilleur score possible.
+              Ce projet a pour but de résoudre un jeu vidéo indépendant nommé Marciac's Pocket Festival et de donner le meilleur score possible.
             </v-card-text>
 
             <v-divider></v-divider>
@@ -606,9 +599,10 @@ const itemsParallax = ref([
 </script>
 
 <style scoped>
-.contentPage{
+.contentPage {
   margin-bottom: 10%;
 }
+
 .parallax-image {
   background-size: contain;
   min-height: 200px;
@@ -624,7 +618,9 @@ const itemsParallax = ref([
   background-image: url("../../section.png");
   color: #F5CB5C;
   text-align: center;
-  font-size: 200%;
+  font-size: clamp(30px, 2vw, 40px);
+  white-space: normal;
+  word-break: break-word;
   padding-top: 5%;
   padding-bottom: 5%;
   margin-top: 5%;
@@ -637,11 +633,17 @@ const itemsParallax = ref([
 }
 
 .cardTextContent {
+  font-size: clamp(16px, 1vw, 25px);
+  white-space: normal;
+  word-break: break-word;
   color: #CFDBD5;
 }
 
 .cardTitle {
   color: #F5CB5C;
+  font-size: clamp(25px, 2vw, 30px);
+  white-space: normal;
+  word-break: break-word;
 }
 
 .cardPresentation {
@@ -658,11 +660,13 @@ const itemsParallax = ref([
 }
 
 .productionCard {
-  width: 70%;
+  width: 100%;
   height: 60%;
   margin-top: 1%;
   margin-bottom: 1%;
   text-align: justify;
+  white-space: normal;
+  word-break: break-word;
   border: #333533 solid 1px;
   border-radius: 4px;
 
@@ -670,13 +674,21 @@ const itemsParallax = ref([
 
 .titleProject {
   color: #F5CB5C;
-
+  font-size: clamp(20px, 1.2vw, 30px);
+  font-weight: bold;
+  text-align: justify;
+  white-space: normal;
+  word-break: break-word;
+  margin: 1%;
 
 }
 
 .descriptionProject {
   color: #CFDBD5;
   text-align: justify;
+  font-size: clamp(12px, 0.9vw, 25px);
+  white-space: normal;
+  word-break: break-word;
 }
 
 .groupChip {
@@ -687,6 +699,9 @@ const itemsParallax = ref([
   background-color: #f4db87;
   color: black;
   font-weight: bold;
+  font-size: clamp(8px, 2vw, 25px);
+  white-space: normal;
+  word-break: break-word;
 }
 
 .btnCodeSource {

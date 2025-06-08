@@ -11,7 +11,7 @@ const items = [
 </script>
 
 <template>
-  <v-app-bar :elevation="2">
+  <v-app-bar class="barHeader" :elevation="2">
 
     <v-img max-height="50" max-width="50" class="mr-4" src="@/assets/logo_Gab.png"></v-img>
 
@@ -60,17 +60,26 @@ const items = [
 .namePage {
   color: #CFDBD5;
   display: flex;
+  padding: clamp(9px, 1vw, 18px) clamp(9px, 1vw, 18px);
+  font-size: clamp(9px, 0.9vw, 20px);
 }
 .iconMenu {
   margin-right: 2%;
 }
 .navDrawer{
   color: #CFDBD5;
+  padding-top: 5%;
   background-image: url("@/assets/imageDrawer.jpg");
   image-orientation: flip;
 }
 
 .titleHeader{
   color: #CFDBD5;
+  font-size: clamp(17px, 1.2vw, 30px);
+  white-space: normal;
+  word-break: break-word;
+}
+.barHeader{
+  padding: clamp(8px, 1vw, 14px) clamp(8px, 1vw, 14px);
 }
 </style>

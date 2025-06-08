@@ -99,10 +99,8 @@
                     </h2>
                     <br>
                     <p class="timelineContent">
-                      Durant cette échange j'ai eu la chande d'approfondire mes connaissance en sécurité des Réseaux et
-                      dans les technologies Big Data.
-                      J'ai également pu appronfondire mes connaissances en C, en mathématiques et dans l'études des
-                      signaux.
+                      Durant cet échange, j'ai eu la chance d'approfondir mes connaissances en sécurité des Réseaux et dans les technologies Big Data.
+                      J'ai également pu approfondir mes connaissances en C, en mathématiques et dans l'étude des signaux.
                     </p>
                   </div>
                 </v-timeline-item>
@@ -113,10 +111,8 @@
                     </h2>
                     <br>
                     <p class="timelineContent">
-                      La librairie langChaine4j est une librairie java qui se base sur la librairie LangChain en python
-                      pour la création de LLM ou de modèle de manière général.
-                      Durant ce laps de temps j'ai cherché à comprendre commen la librairie fonctionnait en essayant de
-                      recréé un LLM.
+                      La librairie langChaine4j est une librairie Java qui se base sur la librairie LangChain en python pour la création de LLM ou de modèle de manière générale.
+                      Durant ce laps de temps, j'ai cherché à comprendre comment la librairie fonctionnait en essayant de recréer un LLM.
                     </p>
                   </div>
                 </v-timeline-item>
@@ -128,8 +124,7 @@
                     </h2>
                     <br>
                     <p class="timelineContent">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua.
+                      Durant ce premier semestre, j'ai pu terminer mon projet d'étude de scanner Lidar et découvrir de nouvelles notions en Statistique, Node Js, Mécatronique ou encore en développement assembleur.
                     </p>
                   </div>
                 </v-timeline-item>
@@ -154,10 +149,7 @@
                     </h2>
                     <br>
                     <p class="timelineContent">
-                      Développer une librairie en JAVA permettant de générer des données DICOM (format/standard
-                      d'échange d'images en imagerie médicale) à partir de critères simples (géométrie, stratégie de
-                      colorisation des pixels ...) afin de pouvoir utiliser ces données générées comme données de test
-                      des applications à la place de données patient réel.
+                      Développer une librairie en JAVA permettant de générer des données DICOM (format/standard d'échange d'images en imagerie médicale) à partir de critères simples (géométrie, stratégie de colorisation des pixels ...) afin de pouvoir utiliser ces données générées comme données de test des applications à la place de données patient réel.
                     </p>
                   </div>
                 </v-timeline-item>
@@ -169,11 +161,11 @@
                     </h2>
                     <br>
                     <p class="timelineContent">
-                      Durant ma première année d'école supérieur j'ais pu apprendre les bases de l'ingénérie et de
-                      l'informatique.
+                      Durant ma première année d'école supérieure, j'ai pu apprendre les bases de l'ingénierie et de l'informatique.
+
                       <br>
                       <br>
-                      De plus j'ai eu la chance d'effectuer de nombreux projets :
+                      De plus, j'ai eu la chance d'effectuer de nombreux projets :
                       <v-list class="timelineContent">
                         <v-list-item> - Questionnaire en PHP</v-list-item>
                         <v-list-item> - Site Responsive sur plusieurs pages</v-list-item>
@@ -200,8 +192,7 @@
                       PASS TON HACK D'ABORD
                     </h2>
                     <p class="timelineContent">
-                      Pass Ton Hack d'abord était un concours de l'Etats qui avait pour objectif de sensibilier les
-                      jeunes sur la cybersécurité.
+                      Pass Ton Hack d'abord était un concours de l'Etat qui avait pour objectif de sensibilité les jeunes sur la cybersécurité.
                     </p>
                   </div>
                 </v-timeline-item>
@@ -212,8 +203,7 @@
                       BAC Spécialité Maths, Physique, Maths Expert
                     </h2>
                     <p class="timelineContent">
-                      J'ai eu mon BAC avec les spécialité Maths, Physique et Maths Expert avec mention assez bien. J'ai
-                      fait mon BAC dans le lycée privée catholique Jean Paul II
+                      J'ai eu mon BAC avec les spécialités Maths, Physique et Maths Expert avec mention assez bien. J'ai fait mon BAC dans le lycée privée catholique Jean Paul II
                     </p>
                   </div>
                 </v-timeline-item>
@@ -279,15 +269,18 @@ import DefaultLayout from "@/components/defaultLayout.vue";
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: clamp(16px, 2vw, 25px);
+  height: 120%;
 }
 .titleCV {
   color: #F5CB5C;
-  font-size: 1.8rem;
+  font-size: clamp(16px, 2vw, 25px);
   text-align: center;
   white-space: normal;
   word-break: break-word;
 }
 .subtitleCV{
+  font-size: clamp(10px, 2vw, 15px);
   text-align: center;
   white-space: normal;
   word-break: break-word;
@@ -320,9 +313,11 @@ import DefaultLayout from "@/components/defaultLayout.vue";
 .title {
   text-align: center;
   color: #F5CB5C;
-  font-size: 300%;
+  font-size: clamp(50px, 3vw, 60px);
   margin-top: 2%;
   margin-bottom: 2%;
+  white-space: normal;
+  word-break: break-word;
 }
 
 .subtitle {
@@ -331,7 +326,9 @@ import DefaultLayout from "@/components/defaultLayout.vue";
   background-image: url("../../section.png");
   color: #F5CB5C;
   text-align: center;
-  font-size: 200%;
+  font-size: clamp(35px, 2vw, 45px);
+  white-space: normal;
+  word-break: break-word;
   padding-top: 5%;
   padding-bottom: 4%;
 
@@ -341,22 +338,34 @@ import DefaultLayout from "@/components/defaultLayout.vue";
 
 .cardTextContent {
   color: #CFDBD5;
+  font-size: clamp(16px, 1vw, 25px);
+  white-space: normal;
+  word-break: break-word;
 }
 
 .yearsStyleStepper {
   color: #F5CB5C;
+  font-size: clamp(16px, 2vw, 25px);
+  white-space: normal;
+  word-break: break-word;
 }
 
 .stepperButton {
   color: #F5CB5C;
+
 }
 
 .timelineTitleContent {
-  font-size: 120%;
+  font-size: clamp(16px, 2vw, 22px);
+  white-space: normal;
+  word-break: break-word;
 }
 
 .timelineContent {
   color: #CFDBD5;
+  font-size: clamp(10px, 2vw, 17px);
+  white-space: normal;
+  word-break: break-word;
 }
 
 </style>

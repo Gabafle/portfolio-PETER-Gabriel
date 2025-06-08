@@ -10,23 +10,21 @@ const icons = [
 
 <template>
   <v-footer class="styleFooter">
-    <div class="text-caption font-weight-regular" style="color: #F5CB5C">
+    <div class="footerTitle">
       Suivez moi sur les réseaux !!
     </div>
 
-    <div class="d-flex ga-3">
+    <div class="iconMedia">
       <v-btn
         v-for="(item, index) in icons"
         :key="index"
         :icon="item.icon"
         :href="item.link"
-        target="_blank"
         density="comfortable"
-        variant="text"
       ></v-btn>
     </div>
 
-    <div class="text-caption font-weight-regular opacity-60">
+    <div class="footerContent">
       Ce site a été fait par PETER Gabriel avec les frameworks Vuetify et Vue.
       <br />
       please check :
@@ -42,15 +40,26 @@ const icons = [
 .styleFooter {
   position: fixed;
   bottom: 0;
-  left: 0;
   width: 100%;
   z-index: 100;
-  background-color: #1e1e1e;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: white;
-  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.footerContent{
+  font-size: clamp(8px, 0.7vw, 18px);
+  opacity: 60%;
+
+}
+.footerTitle{
+  font-size: clamp(10px, 0.9vw, 20px);
+  color: #F5CB5C;
+  font-weight: bold;
+}
+.iconMedia{
+  display: flex;
+  gap: 0.6rem;
 }
 </style>
