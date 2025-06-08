@@ -61,8 +61,10 @@
                 <v-card-subtitle>About Me</v-card-subtitle>
                 <v-card-text class="cardTextContent">
                   <em>"Ce qui se conçoit bien s'énonce clairement et les mots pour le dire arrivent aisément - <b>Nicolas
-                    Boileau</b>"</em><br><br>
-
+                    Boileau</b>"</em>
+                  <br>
+                  Aiment apprendre et maîtriser de nouvelles connaissances, cette citation est comme un mantra pour moi.
+                  <br>
                   Je suis étudiant en 2ᵉ année de Bachelor Ingénierie et Cybersécurité à l’ESILV, j’ai 21 ans et une
                   passion débordante pour le développement logiciel, les systèmes complexes et l’apprentissage autonome.
                   <br><br>
@@ -99,7 +101,7 @@
                     <li>Digiteam : Digiteam est une association de réparation des ordinateurs pour les étudiants du pôle Léonard de Vinci.
                       Dans cette association, j'ai eu l'opportunité d'apprendre comment réparer et monter un ordinateur ou réglé quelques problèmes Software.
                     </li>
-                    <li>Game Of Devinci : Game Of Devinci est une association de jeux de société et jeux de rôles. Durant ma première année, j'ai rejoint cette association pour conquérir les terres sombres du MorDor.</li>
+                    <li>Game Of Devinci : Game Of Devinci est une association de jeux de société et jeux de rôles du pôle Léonard de Vinci. Durant ma première année, j'ai rejoint cette association pour conquérir les terres sombres du MorDor.</li>
                   </ul>
                   <br>
                   <em>Si vous voulez en savoir plus ou accéder à mon CV c'est par <router-link :to="{ path: '/monProfil', hash: '#downloadCV' }">

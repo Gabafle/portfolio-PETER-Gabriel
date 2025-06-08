@@ -17,6 +17,8 @@
               <em>" ce qui se conçoit bien s'énonce clairement et les mots pour le dire arrivent aisément - <b> Nicolas
                 Boileau </b>" </em><br>
               <br>
+              Aiment apprendre et maîtriser de nouvelles connaissances, cette citation est comme un mantra pour moi.
+              <br>
               Je suis étudiant en 2ᵉ année de Bachelor Ingénierie et Cybersécurité à l’ESILV, j’ai 21 ans et une passion
               débordante
               pour tout ce qui touche au développement logiciel, aux systèmes complexes et à l’apprentissage autonome.
