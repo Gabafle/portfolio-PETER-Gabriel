@@ -21,7 +21,7 @@
               <v-card class="styleCard">
                 <v-img
                   class="imageFit"
-                  src="@/assets/imageTools/javaLogo.jpg"
+                  src="@/assets/imageTools/javaLogo.png"
                 />
                 <v-card-title> Java</v-card-title>
                 <v-card-text>
@@ -56,7 +56,7 @@
               <v-card class="styleCard">
                 <v-img
                   class="imageFit"
-                  src="@/assets/imageTools/PythonLogo.jpg"
+                  src="@/assets/imageTools/PythonLogo.png"
                 />
                 <v-card-title> Python</v-card-title>
                 <v-card-text>
@@ -67,7 +67,7 @@
               <v-card class="styleCard">
                 <v-img
                   class="imageFit"
-                  src="@/assets/imageTools/CLogo.jpg"
+                  src="@/assets/imageTools/CLogo.png"
                 />
                 <v-card-title> C</v-card-title>
                 <v-card-text>
@@ -122,7 +122,7 @@
               <v-card class="styleCard">
                 <v-img
                   class="imageFit"
-                  src="@/assets/imageTools/HtmlCssLogo.jpg"
+                  src="@/assets/imageTools/HtmlCssLogo.png"
                 />
                 <v-card-title> HTML CSS</v-card-title>
                 <v-card-text>
@@ -307,7 +307,7 @@
               <v-card class="styleCard">
                 <v-img
                   class="imageFit"
-                  src="@/assets/imageTools/langchain4j.jpg"
+                  src="@/assets/imageTools/langchain4j.png"
                 />
                 <v-card-title> LangChain4j</v-card-title>
                 <v-card-text>
