@@ -250,7 +250,7 @@
                   class="imageFit"
                   src="@/assets/imageTools/vmware.png"
                 />
-                <v-card-title> VM WareWorkStation</v-card-title>
+                <v-card-title> VM Ware WorkStation</v-card-title>
                 <v-card-text>
                   VMware Workstation est un outil de virtualisation de poste de travail créé par la société.
                   VMware, il peut être utilisé pour mettre en place un environnement de test pour développer de nouveaux logiciels.
@@ -455,11 +455,11 @@ watch(drawer, (newVal) => {
 }
 
 .styleCard {
-  width: 300px;
-  height: auto;
+  width: 280px;
+  height: 600px;
   background-color: #333533;
   margin: 1% 0.5%;
-  padding-bottom: 10%;
+  margin-top: 2%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
   0 6px 20px rgba(0, 0, 0, 0.19);
@@ -475,7 +475,7 @@ watch(drawer, (newVal) => {
 .imageFit {
   display: flex;
   margin: auto;
-  width: 35%;
+  width: 50%;
   height: 35%;
 }
 

@@ -17,7 +17,28 @@ const items = [
 
     <v-app-bar-title class="titleHeader">Développeur Logiciel PETER Gabriel</v-app-bar-title>
 
-    <v-app-bar-nav-icon @click="drawer = !drawer" class="d-md-none"></v-app-bar-nav-icon>
+    <!-- V-MENU pour petits écrans -->
+    <v-menu>
+      <template v-slot:activator="{ props }">
+        <v-app-bar-nav-icon v-bind="props" class="d-md-none"></v-app-bar-nav-icon>
+      </template>
+
+      <v-list>
+        <v-list-item
+          class="drawerItem"
+          v-for="(item, index) in items"
+          :key="index"
+          :to="item.link"
+          @click="drawer = false"
+          link
+        >
+          <v-icon>{{ item.icon }}</v-icon>
+          <v-list-item-title>{{ item.name }}</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-menu>
+
+    <!-- Menu Desktop -->
     <div class="d-none d-md-flex">
       <v-btn
         v-for="(item, index) in items"
@@ -33,28 +54,8 @@ const items = [
       </v-btn>
     </div>
   </v-app-bar>
-
-  <!-- Drawer pour petits écrans -->
-  <v-navigation-drawer
-    v-model="drawer"
-    temporary
-    class="navDrawer"
-    location="right"
-  >
-    <v-list>
-      <v-list-item
-        v-for="(item, index) in items"
-        :key="index"
-        :to="item.link"
-        @click="drawer = false"
-        link
-      >
-          <v-icon>{{ item.icon }}</v-icon>
-        <v-list-item-title>{{ item.name }}</v-list-item-title>
-      </v-list-item>
-    </v-list>
-  </v-navigation-drawer>
 </template>
+
 
 <style scoped>
 .namePage {
@@ -69,8 +70,8 @@ const items = [
 .navDrawer{
   color: #CFDBD5;
   padding-top: 5%;
-  background-image: url("@/assets/imageDrawer.jpg");
-  image-orientation: flip;
+  background-color: transparent;
+  height: 60vh;
 }
 
 .titleHeader{
@@ -81,5 +82,8 @@ const items = [
 }
 .barHeader{
   padding: clamp(8px, 1vw, 14px) clamp(8px, 1vw, 14px);
+}
+.drawerItem{
+  background-color: #151515;
 }
 </style>

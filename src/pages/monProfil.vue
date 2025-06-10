@@ -2,9 +2,8 @@
   <DefaultLayout>
     <v-app class="contentPage">
       <h1 class="title">
-        à Propos
+        À Propos
       </h1>
-      <v-divider />
 
       <h2 class="subtitle">
         Ma Description
@@ -13,61 +12,26 @@
       <v-container>
         <v-card>
           <v-card-text class="cardTextContent">
-            <p>
-              <em>" ce qui se conçoit bien s'énonce clairement et les mots pour le dire arrivent aisément - <b> Nicolas
-                Boileau </b>" </em><br>
-              <br>
-              Aiment apprendre et maîtriser de nouvelles connaissances, cette citation est comme un mantra pour moi.
-              <br>
-              Je suis étudiant en 2ᵉ année de Bachelor Ingénierie et Cybersécurité à l’ESILV, j’ai 21 ans et une passion
-              débordante
-              pour tout ce qui touche au développement logiciel, aux systèmes complexes et à l’apprentissage autonome.
-              <br>
-
-              Derrière l’écran, il y a aussi un esprit curieux et touche-à-tout : si je ne suis pas en train de coder ou
-              de démonter une techno,
-              je suis sûrement sur un tatami, un carnet de croquis à la main, sur une batterie , ou le nez plongé dans
-              un livre de productivité
-              ou de codes.
-              <br>
-              🧠 INTJ-T, ennéagramme 5 : j’aime creuser, comprendre, et bâtir des choses qui ont du sens.
-              <br>
-              <br>
-            </p>
-            <h3>🏷️ Mon style : </h3>
-            <ul class="ma-lg-5">
-              <li> Apprendre, Créé, Optimiser.</li>
-              <li> Persevérant</li>
-              <li>Travailler seul quand il faut… mais toujours partant pour un bon challenge d’équipe.</li>
-            </ul>
-            <h3>🕹️ Mes Hobbies</h3>
-            <ul class="ma-lg-5">
-              <li>Développer des Logiciels et Apprendre de nouvelles technologies</li>
-              <li>Cajon</li>
-              <li>Batterie</li>
-              <li>Akïdo</li>
-              <li>Dessin</li>
-              <li>Intelligence Artificielle</li>
-              <li> Jeux de société</li>
-              <li> Echec</li>
-            </ul>
-            <h3>🔖 Mes Association </h3>
-            <ul class="ma-lg-5">
-              <li>Digiteam : Digiteam est une association de réparation des ordinateurs pour les étudiants du pôle Léonard de Vinci.
-                Dans cette association, j'ai eu l'opportunité d'apprendre comment réparer et monter un ordinateur ou réglé quelques problèmes Software.
-              </li>
-              <li>Game Of Devinci : Game Of Devinci est une association de jeux de société et jeux de rôles. Durant ma première année, j'ai rejoint cette association pour conquérir les terres sombres du MorDor.</li>
-            </ul>
-
+            <em>"Ce qui se conçoit bien s'énonce clairement et les mots pour le dire arrivent aisément - <b>Nicolas
+              Boileau</b>"</em>
             <br>
-            <p>
-              <em>Si vous voulez en savoir plus ou accéder à mon CV c'est par <a href="#" @click.prevent="scrollToCV">ici !</a> </em>
-            </p>
+            Aiment apprendre et maîtriser de nouvelles connaissances, cette citation est comme un mantra pour moi.
+            <br>
+            Je suis étudiant en 2ᵉ année de Bachelor Ingénierie et Cybersécurité à l’ESILV, j’ai 21 ans et une
+            passion débordante pour le développement logiciel, les systèmes complexes et l’apprentissage autonome.
+            <br><br>
+
+            Derrière l’écran, il y a aussi un esprit curieux et touche-à-tout : si je ne suis pas en train de
+            coder ou démonter une techno, je suis sûrement sur un tatami, un carnet de croquis à la main, sur une
+            batterie ou plongé dans un livre de productivité ou de codes.
+            <br><br>
+
+            🧠 INTJ-T, ennéagramme 5 : j’aime creuser, comprendre, et bâtir des choses qui ont du sens.
+            <br><br>
           </v-card-text>
         </v-card>
       </v-container>
 
-      <v-divider />
 
       <h2 class="subtitle">
         Mon Parcours
@@ -355,7 +319,7 @@ function scrollToCV() {
 
 .cardTextContent {
   color: #CFDBD5;
-  font-size: clamp(16px, 1vw, 25px);
+  font-size: clamp(20px, 1vw, 25px);
   white-space: normal;
   word-break: break-word;
 }

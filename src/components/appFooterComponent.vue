@@ -25,14 +25,8 @@ const icons = [
     </div>
 
     <div class="footerContent">
-      Ce site a été fait par PETER Gabriel avec les frameworks Vuetify et Vue.
-      <br />
-      please check :
-      <br />
-      <a href="https://vuejs.org/">@Vue</a>
-      <br />
-      <a href="https://vuetifyjs.com/en/">@Vuetify</a>
-    </div>
+      Ce site a été fait par PETER Gabriel avec les frameworks  <a href="https://vuejs.org/">@Vue</a> et  <a href="https://vuetifyjs.com/en/">@Vuetify</a>
+     </div>
   </v-footer>
 </template>
 
@@ -46,6 +40,11 @@ const icons = [
   display: flex;
   flex-direction: column;
   justify-content: center;
+  elevation: below;
+  background-color: #1b1a1a;
+  padding-top: 3%;
+  padding-bottom: 2%;
+
 }
 
 .footerContent{

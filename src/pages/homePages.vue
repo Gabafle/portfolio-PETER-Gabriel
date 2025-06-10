@@ -23,111 +23,67 @@
         </v-carousel>
       </v-container>
 
-      <v-container
-        class="cardPresentation"
-        max-width="88%"
-        fluid
-      >
-        <v-row
-          align="center"
-          justify="center"
-          class="flex-column flex-md-row"
-        >
-          <v-col
-            cols="12"
-            md="4"
-            class="d-flex justify-center mb-4 mb-md-0"
-          >
+      <v-container class="descrtionAll" fluid>
+        <v-row class="mainRow" no-gutters>
+          <v-col cols="12" md="5" class="leftPart">
+            <h1>Gabriel PETER</h1>
             <v-img
-              width="100%"
-              max-width="300"
               src="@/assets/ghibly.png"
-            />
+              class="profileImage"
+              width="40%"
+            ></v-img>
           </v-col>
 
+          <!-- Partie droite -->
+          <v-col cols="12" md="7" class="rightPart">
+            <!-- Carte Description -->
+            <v-card class="mb-4">
+              <v-card-title class="titleDescritpion">Description</v-card-title>
+              <v-card-subtitle>About Me</v-card-subtitle>
+              <v-card-text class="texteDescritpion">
+                <em>"Ce qui se conçoit bien s'énonce clairement et les mots pour le dire arrivent aisément - <b>Nicolas
+                  Boileau</b>"</em>
+                <br>
+                Aiment apprendre et maîtriser de nouvelles connaissances, cette citation est comme un mantra pour moi.
+                <br>
+                Je suis étudiant en 2ᵉ année de Bachelor Ingénierie et Cybersécurité à l'ESILV, j'ai 21 ans et une
+                passion débordante pour le développement logiciel, les systèmes complexes et l'apprentissage autonome.
+                <br><br>
 
-          <v-col
-            cols="12"
-            md="8"
-          >
-            <v-card
-              elevation="2"
-              class="pa-4"
-            >
-              <div class="d-flex flex-column">
-                <v-card-title class="cardTitle">
-                  Gabriel PETER
-                </v-card-title>
-                <v-card-subtitle>About Me</v-card-subtitle>
-                <v-card-text class="cardTextContent">
-                  <em>"Ce qui se conçoit bien s'énonce clairement et les mots pour le dire arrivent aisément - <b>Nicolas
-                    Boileau</b>"</em>
-                  <br>
-                  Aiment apprendre et maîtriser de nouvelles connaissances, cette citation est comme un mantra pour moi.
-                  <br>
-                  Je suis étudiant en 2ᵉ année de Bachelor Ingénierie et Cybersécurité à l’ESILV, j’ai 21 ans et une
-                  passion débordante pour le développement logiciel, les systèmes complexes et l’apprentissage autonome.
-                  <br><br>
+                Derrière l'écran, il y a aussi un esprit curieux et touche-à-tout : si je ne suis pas en train de
+                coder ou démonter une techno, je suis sûrement sur un tatami, un carnet de croquis à la main, sur une
+                batterie ou plongé dans un livre de productivité ou de codes.
+                <br><br>
 
-                  Derrière l’écran, il y a aussi un esprit curieux et touche-à-tout : si je ne suis pas en train de
-                  coder ou démonter une techno, je suis sûrement sur un tatami, un carnet de croquis à la main, sur une
-                  batterie ou plongé dans un livre de productivité ou de codes.
-                  <br><br>
+                🧠 INTJ-T, ennéagramme 5 : j'aime creuser, comprendre, et bâtir des choses qui ont du sens.
+                <br><br>
 
-                  🧠 INTJ-T, ennéagramme 5 : j’aime creuser, comprendre, et bâtir des choses qui ont du sens.
-                  <br><br>
-
-                  <h3>🏷️ Mon style :</h3>
-                  <ul>
-                    <li>Apprendre, Créer, Optimiser.</li>
-                    <li>Persévérant</li>
-                    <li>Travailleur autonome, mais partant pour un challenge d'équipe.</li>
-                  </ul>
-                  <br>
-                  <h3>🕹️ Mes Hobbies</h3>
-                  <ul>
-                    <li>Développement logiciel</li>
-                    <li>Cajon</li>
-                    <li>Batterie</li>
-                    <li>Akïdo</li>
-                    <li>Dessin</li>
-                    <li>Intelligence Artificielle</li>
-                    <li> Jeux de société</li>
-                    <li> Echec</li>
-                  </ul>
-                  <br>
-                  <h3>🔖 Mes Association </h3>
-                  <ul >
-                    <li>Digiteam : Digiteam est une association de réparation des ordinateurs pour les étudiants du pôle Léonard de Vinci.
-                      Dans cette association, j'ai eu l'opportunité d'apprendre comment réparer et monter un ordinateur ou réglé quelques problèmes Software.
-                    </li>
-                    <li>Game Of Devinci : Game Of Devinci est une association de jeux de société et jeux de rôles du pôle Léonard de Vinci. Durant ma première année, j'ai rejoint cette association pour conquérir les terres sombres du MorDor.</li>
-                  </ul>
-                  <br>
-                  <em>Si vous voulez en savoir plus ou accéder à mon CV c'est par <router-link :to="{ path: '/monProfil', hash: '#downloadCV' }">
-                    ici !
-                  </router-link> </em>
-                </v-card-text>
-
-                <div class="d-flex justify-center mt-2">
-                  <v-btn
-                    to="/monProfil"
-                    class="buttonProfil"
-                  >
-                    See More
-                  </v-btn>
-                </div>
-              </div>
+              </v-card-text>
             </v-card>
+
+            <!-- Petites cartes -->
+            <v-row dense class="smallCardPresentationList">
+              <v-col cols="12" sm="6" md="4" v-for="(card, index) in smallCards" :key="index">
+                <v-hover v-slot="{ isHovering, props }">
+                  <v-card class="smallDescritpionItems" :elevation="isHovering ? 12 : 5" v-bind="props" :color="isHovering ? '#cc9400' : undefined">
+                    <v-card-title class="titleDescritpion">{{ card.title }}</v-card-title>
+                    <v-card-text>
+                      <div v-for="(item, i) in card.items" :key="i">{{ item }}</div>
+                    </v-card-text>
+                  </v-card>
+                </v-hover>
+              </v-col>
+            </v-row>
           </v-col>
         </v-row>
       </v-container>
-
       <v-container>
         <h2 class="styleSection">
           My Production
         </h2>
-        <v-sheet class="sheetProduction">
+
+        <!-- Container avec grille responsive pour les cartes -->
+        <div class="projectsGrid">
           <v-card class="productionCard">
             <div class="titleProject">
               <h4>PortFolio</h4>
@@ -141,36 +97,24 @@
             </v-card-text>
 
             <v-divider/>
-            <v-chip-group class="groupChip">
-              <v-chip class="chipItem">
-                Vue
-              </v-chip>
-              <v-chip class="chipItem">
-                Vuetify
-              </v-chip>
-              <v-chip class="chipItem">
-                TypeScript
-              </v-chip>
-              <v-chip class="chipItem">
-                JavaScript
-              </v-chip>
-              <v-chip class="chipItem">
-                HTML
-              </v-chip>
-              <v-chip class="chipItem">
-                CSS
-              </v-chip>
-            </v-chip-group>
+            <div class="chipContainer">
+              <v-chip class="chipItem">Vue</v-chip>
+              <v-chip class="chipItem">Vuetify</v-chip>
+              <v-chip class="chipItem">TypeScript</v-chip>
+              <v-chip class="chipItem">JavaScript</v-chip>
+              <v-chip class="chipItem">HTML</v-chip>
+              <v-chip class="chipItem">CSS</v-chip>
+            </div>
             <v-btn
               variant="elevated"
               prepend-icon="mdi-github"
               href="https://github.com/Gabafle/PortFolio-PETER-Gabriel.git"
               target="_blank"
-              class="btnCodeSource"
-            >
+              class="btnCodeSource">
               Code source
             </v-btn>
           </v-card>
+
           <v-card class="productionCard">
             <div class="titleArea">
               <div class="titleProject">
@@ -180,8 +124,7 @@
                 <template #activator="{ props }">
                   <v-icon
                     v-bind="props"
-                    class="statutProjectPrivate"
-                  >
+                    class="statutProjectPrivate">
                     mdi-badge-account
                   </v-icon>
                 </template>
@@ -196,35 +139,17 @@
             </v-card-text>
 
             <v-divider/>
-            <v-chip-group class="groupChip">
-              <v-chip class="chipItem">
-                Java
-              </v-chip>
-              <v-chip class="chipItem">
-                Spring boot
-              </v-chip>
-              <v-chip class="chipItem">
-                DCM4CHE
-              </v-chip>
-              <v-chip class="chipItem">
-                Vue
-              </v-chip>
-              <v-chip class="chipItem">
-                Vuetify
-              </v-chip>
-              <v-chip class="chipItem">
-                JavaScript
-              </v-chip>
-              <v-chip class="chipItem">
-                Maven
-              </v-chip>
-              <v-chip class="chipItem">
-                Sonar
-              </v-chip>
-              <v-chip class="chipItem">
-                git
-              </v-chip>
-            </v-chip-group>
+            <div class="chipContainer">
+              <v-chip class="chipItem">Java</v-chip>
+              <v-chip class="chipItem">Spring boot</v-chip>
+              <v-chip class="chipItem">DCM4CHE</v-chip>
+              <v-chip class="chipItem">Vue</v-chip>
+              <v-chip class="chipItem">Vuetify</v-chip>
+              <v-chip class="chipItem">JavaScript</v-chip>
+              <v-chip class="chipItem">Maven</v-chip>
+              <v-chip class="chipItem">Sonar</v-chip>
+              <v-chip class="chipItem">git</v-chip>
+            </div>
           </v-card>
 
           <v-card class="productionCard">
@@ -234,7 +159,10 @@
               </div>
               <v-tooltip text="Scholar issues">
                 <template #activator="{ props }">
-                  <v-icon v-bind="props">
+                  <v-icon
+                    v-bind="props"
+                    class="statutProjectScholar"
+                  >
                     mdi-account-school
                   </v-icon>
                 </template>
@@ -248,26 +176,14 @@
             </v-card-text>
 
             <v-divider/>
-            <v-chip-group class="groupChip">
-              <v-chip class="chipItem">
-                Electronique
-              </v-chip>
-              <v-chip class="chipItem">
-                LIDAR
-              </v-chip>
-              <v-chip class="chipItem">
-                Python
-              </v-chip>
-              <v-chip class="chipItem">
-                Soudure
-              </v-chip>
-              <v-chip class="chipItem">
-                Moteur pas à pas
-              </v-chip>
-              <v-chip class="chipItem">
-                Arduino
-              </v-chip>
-            </v-chip-group>
+            <div class="chipContainer">
+              <v-chip class="chipItem">Electronique</v-chip>
+              <v-chip class="chipItem">LIDAR</v-chip>
+              <v-chip class="chipItem">Python</v-chip>
+              <v-chip class="chipItem">Soudure</v-chip>
+              <v-chip class="chipItem">Moteur pas à pas</v-chip>
+              <v-chip class="chipItem">Arduino</v-chip>
+            </div>
           </v-card>
 
           <v-card class="productionCard">
@@ -277,7 +193,10 @@
               </div>
               <v-tooltip text="Scholar issues">
                 <template #activator="{ props }">
-                  <v-icon v-bind="props">
+                  <v-icon
+                    v-bind="props"
+                    class="statutProjectScholar"
+                  >
                     mdi-account-school
                   </v-icon>
                 </template>
@@ -290,23 +209,13 @@
             </v-card-text>
 
             <v-divider/>
-            <v-chip-group class="groupChip">
-              <v-chip class="chipItem">
-                PHP
-              </v-chip>
-              <v-chip class="chipItem">
-                SQL
-              </v-chip>
-              <v-chip class="chipItem">
-                PhpAdmin
-              </v-chip>
-              <v-chip class="chipItem">
-                HTML
-              </v-chip>
-              <v-chip class="chipItem">
-                CSS
-              </v-chip>
-            </v-chip-group>
+            <div class="chipContainer">
+              <v-chip class="chipItem">PHP</v-chip>
+              <v-chip class="chipItem">SQL</v-chip>
+              <v-chip class="chipItem">PhpAdmin</v-chip>
+              <v-chip class="chipItem">HTML</v-chip>
+              <v-chip class="chipItem">CSS</v-chip>
+            </div>
             <v-btn
               variant="elevated"
               prepend-icon="mdi-github"
@@ -325,7 +234,10 @@
               </div>
               <v-tooltip text="Scholar issues">
                 <template #activator="{ props }">
-                  <v-icon v-bind="props">
+                  <v-icon
+                    v-bind="props"
+                    class="statutProjectScholar"
+                  >
                     mdi-account-school
                   </v-icon>
                 </template>
@@ -337,11 +249,9 @@
             </v-card-text>
 
             <v-divider/>
-            <v-chip-group class="groupChip">
-              <v-chip class="chipItem">
-                Javascript
-              </v-chip>
-            </v-chip-group>
+            <div class="chipContainer">
+              <v-chip class="chipItem">Javascript</v-chip>
+            </div>
             <v-btn
               variant="elevated"
               prepend-icon="mdi-github"
@@ -360,7 +270,10 @@
               </div>
               <v-tooltip text="Scholar issues">
                 <template #activator="{ props }">
-                  <v-icon v-bind="props">
+                  <v-icon
+                    v-bind="props"
+                    class="statutProjectScholar"
+                  >
                     mdi-account-school
                   </v-icon>
                 </template>
@@ -368,31 +281,20 @@
             </div>
 
             <v-card-text class="descriptionProject">
-              Ce projet avait pour objectif de réaliser un Pipe Line Kafka qui récupérait des données de qualité de l'air de plusieurs grandes villes via l'API OpenWeather.
+              Ce projet avait pour objectif de réaliser un Pipe Line Kafka qui récupérait des données de qualité de
+              l'air de plusieurs grandes villes via l'API OpenWeather.
               L'utilisation de ces données permettait la création de graphique sur ElasticSearch.
             </v-card-text>
 
             <v-divider/>
-            <v-chip-group class="groupChip">
-              <v-chip class="chipItem">
-                Docker
-              </v-chip>
-              <v-chip class="chipItem">
-                Python
-              </v-chip>
-              <v-chip class="chipItem">
-                OpenWeather API
-              </v-chip>
-              <v-chip class="chipItem">
-                ElasticSearch
-              </v-chip>
-              <v-chip class="chipItem">
-                Kibana
-              </v-chip>
-              <v-chip class="chipItem">
-                Kafka
-              </v-chip>
-            </v-chip-group>
+            <div class="chipContainer">
+              <v-chip class="chipItem">Docker</v-chip>
+              <v-chip class="chipItem">Python</v-chip>
+              <v-chip class="chipItem">OpenWeather API</v-chip>
+              <v-chip class="chipItem">ElasticSearch</v-chip>
+              <v-chip class="chipItem">Kibana</v-chip>
+              <v-chip class="chipItem">Kafka</v-chip>
+            </div>
             <v-btn
               variant="elevated"
               prepend-icon="mdi-github"
@@ -411,7 +313,10 @@
               </div>
               <v-tooltip text="Scholar issues">
                 <template #activator="{ props }">
-                  <v-icon v-bind="props">
+                  <v-icon
+                    v-bind="props"
+                    class="statutProjectScholar"
+                  >
                     mdi-account-school
                   </v-icon>
                 </template>
@@ -424,19 +329,17 @@
             </v-card-text>
 
             <v-divider/>
-            <v-chip-group class="groupChip">
-              <v-chip class="chipItem">
-                HTML
-              </v-chip>
-              <v-chip class="chipItem">
-                CSS
-              </v-chip>
-            </v-chip-group>
+            <div class="chipContainer">
+              <v-chip class="chipItem">HTML</v-chip>
+              <v-chip class="chipItem">CSS</v-chip>
+            </div>
           </v-card>
+        </div>
 
-          <h2> Project In Progress</h2>
-          <v-divider/>
+        <h2 class="interSectionProject">Projects In Progress</h2>
+        <v-divider/>
 
+        <div class="projectsGrid">
           <v-card class="productionCard">
             <div class="titleArea">
               <div class="titleProject">
@@ -455,19 +358,16 @@
             </div>
 
             <v-card-text class="descriptionProject">
-              Cauchemars est un projet de jeux vidéo indépendant en collaborations avec une équipe d'une dizaine de personne.
+              Cauchemars est un projet de jeux vidéo indépendant en collaborations avec une équipe d'une dizaine de
+              personne.
               Présider par "Palatops" ce projet de jeux indépendant a pour vocation d'être un jeu plateforme 2D.
             </v-card-text>
 
             <v-divider/>
-            <v-chip-group class="groupChip">
-              <v-chip class="chipItem">
-                C#
-              </v-chip>
-              <v-chip class="chipItem">
-                Godot
-              </v-chip>
-            </v-chip-group>
+            <div class="chipContainer">
+              <v-chip class="chipItem">C#</v-chip>
+              <v-chip class="chipItem">Godot</v-chip>
+            </div>
             <v-btn
               variant="elevated"
               prepend-icon="mdi-github"
@@ -478,10 +378,11 @@
               Code source
             </v-btn>
           </v-card>
+
           <v-card class="productionCard">
             <div class="titleArea">
               <div class="titleProject">
-               <h4> Implementation ToDo ist Notion</h4>
+                <h4>Implementation ToDo ist Notion</h4>
               </div>
 
               <v-tooltip text="In progress">
@@ -498,21 +399,16 @@
 
             <v-card-text class="descriptionProject">
               Ce projet a pour but de permettre une connections de deux logiciels de productivité, Notion et TodoIst.
-              L'objectif est de permettre la visualisation et l'actualisation des taches TodoIst sur Notion et de permettre des visualisations Notion des Taches.
+              L'objectif est de permettre la visualisation et l'actualisation des taches TodoIst sur Notion et de
+              permettre des visualisations Notion des Taches.
             </v-card-text>
 
             <v-divider/>
-            <v-chip-group class="groupChip">
-              <v-chip class="chipItem">
-                C#
-              </v-chip>
-              <v-chip class="chipItem">
-                API Notion
-              </v-chip>
-              <v-chip class="chipItem">
-                Api TodoIst
-              </v-chip>
-            </v-chip-group>
+            <div class="chipContainer">
+              <v-chip class="chipItem">C#</v-chip>
+              <v-chip class="chipItem">API Notion</v-chip>
+              <v-chip class="chipItem">Api TodoIst</v-chip>
+            </div>
             <v-btn
               variant="elevated"
               prepend-icon="mdi-github"
@@ -523,76 +419,62 @@
               Code source
             </v-btn>
           </v-card>
+        </div>
 
-          <h2> Next Project</h2>
-          <v-divider/>
+        <h2 class="interSectionProject">Next Projects</h2>
+        <v-divider/>
 
+        <div class="projectsGrid">
           <v-card class="productionCard">
             <div class="titleArea">
               <div class="titleProject">
-               <h4> DataCleaner</h4>
+                <h4>DataCleaner</h4>
               </div>
             </div>
 
             <v-card-text class="descriptionProject">
-              Ce projet a pour vocation de normaliser selon des formats de données par l'utilisateur, des grandes bases de données.
+              Ce projet a pour vocation de normaliser selon des formats de données par l'utilisateur, des grandes bases
+              de données.
               Les bases de données pourront être de plusieurs formats différents, SQL, json ,txt, xml ,...
-              Les formats de données pourront idéalement être les formats de données établies à l'international ou dans une entreprise pour l'échange de données.
-              Il serait donc possible de créer des formats de données pour après faire le nettoyage grâce à la puissance.
+              Les formats de données pourront idéalement être les formats de données établies à l'international ou dans
+              une entreprise pour l'échange de données.
+              Il serait donc possible de créer des formats de données pour après faire le nettoyage grâce à la
+              puissance.
               de l'IA.
             </v-card-text>
 
             <v-divider/>
-            <v-chip-group class="groupChip">
-              <v-chip class="chipItem">
-                Java
-              </v-chip>
-              <v-chip class="chipItem">
-                Python
-              </v-chip>
-              <v-chip class="chipItem">
-                SQL
-              </v-chip>
-              <v-chip class="chipItem">
-                IA
-              </v-chip>
-              <v-chip class="chipItem">
-                ...
-              </v-chip>
-            </v-chip-group>
+            <div class="chipContainer">
+              <v-chip class="chipItem">Java</v-chip>
+              <v-chip class="chipItem">Python</v-chip>
+              <v-chip class="chipItem">SQL</v-chip>
+              <v-chip class="chipItem">IA</v-chip>
+              <v-chip class="chipItem">...</v-chip>
+            </div>
           </v-card>
 
           <v-card class="productionCard">
             <div class="titleArea">
               <div class="titleProject">
-                <h4>Algorithme de Résolution du Jeux Vidéo Marciac's Pocket Festival </h4>
+                <h4>Algorithme de Résolution du Jeux Vidéo Marciac's Pocket Festival</h4>
               </div>
             </div>
 
             <v-card-text class="descriptionProject">
-              Ce projet a pour but de résoudre un jeu vidéo indépendant nommé Marciac's Pocket Festival et de donner le meilleur score possible.
+              Ce projet a pour but de résoudre un jeu vidéo indépendant nommé Marciac's Pocket Festival et de donner le
+              meilleur score possible.
             </v-card-text>
 
-            <v-divider></v-divider>
-            <v-chip-group class="groupChip">
-              <v-chip class="chipItem">
-                Python
-              </v-chip>
-              <v-chip class="chipItem">
-                Pytest
-              </v-chip>
-              <v-chip class="chipItem">
-                Reinforcement Learning
-              </v-chip>
-              <v-chip class="chipItem">
-                IA
-              </v-chip>
-              <v-chip class="chipItem">
-                ...
-              </v-chip>
-            </v-chip-group>
+            <v-divider/>
+            <div class="chipContainer">
+              <v-chip class="chipItem">Python</v-chip>
+              <v-chip class="chipItem">Pytest</v-chip>
+              <v-chip class="chipItem">Reinforcement Learning</v-chip>
+              <v-chip class="chipItem">IA</v-chip>
+              <v-chip class="chipItem">...</v-chip>
+            </div>
           </v-card>
-        </v-sheet>
+        </div>
       </v-container>
     </v-app>
   </DefaultLayout>
@@ -610,6 +492,20 @@ const itemsParallax = ref([
   new URL('@/assets/parallax/image6.jpg', import.meta.url).href
 ]);
 
+const smallCards = [
+  {
+    title: "Mon style",
+    items: ["🤖 Apprendre, Créer, Optimiser.", "🖋️ Persévérant", "💼 Travailleur autonome, mais partant pour un challenge d'équipe."]
+  },
+  {
+    title: "Mes Hobbies",
+    items: ["⌨️ Développement logiciel", "🪘 Cajon", "🥁 Batterie", "🥋 Akïdo", "✏️ Dessin", "📊 Intelligence Artificielle", "🎲 Jeux de société", "♟️ Echec"]
+  },
+  {
+    title: "Mes Association",
+    items: ["💻 Digiteam", "🕹️ Game Of Devinci"]
+  }
+];
 </script>
 
 <style scoped>
@@ -617,6 +513,7 @@ const itemsParallax = ref([
   margin-bottom: 10%;
 }
 
+/*======== Parallax ======*/
 .parallax-image {
   background-size: contain;
   min-height: 200px;
@@ -640,87 +537,141 @@ const itemsParallax = ref([
   margin-top: 5%;
 }
 
-.buttonProfil {
+/* ======== Description ==========*/
+.titleDescritpion {
   color: #F5CB5C;
-  display: flex;
-  justify-content: space-around;
+  font-size: clamp(20px, 1.2vw, 30px);
 }
 
-.cardTextContent {
-  font-size: clamp(16px, 1vw, 25px);
-  white-space: normal;
-  word-break: break-word;
+.texteDescritpion {
   color: #CFDBD5;
+  font-size: clamp(12px, 1vw, 25px);
 }
 
-.cardTitle {
-  color: #F5CB5C;
-  font-size: clamp(25px, 2vw, 30px);
-  white-space: normal;
-  word-break: break-word;
+.descrtionAll {
+  padding: 18px;
 }
 
-.cardPresentation {
-  margin-top: 5%;
-}
-
-.sheetProduction {
-  margin-top: 5%;
-  background-color: transparent;
+.leftPart {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  text-align: center;
+}
+
+.leftPart h1 {
+  margin-bottom: 16px;
+  color: #F5CB5C;
+  font-weight: bold;
+}
+
+.profileImage {
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.rightPart {
+  display: flex;
+  flex-direction: column;
+}
+
+.smallCardPresentationList {
+  margin-top: 16px;
+}
+
+.smallDescritpionItems {
+  height: 100%;
+  color: #CFDBD5;
+  font-size: clamp(12px, 1vw, 25px);
+}
+
+/*========= Production Style =========*/
+/* Grille responsive pour les cartes de projets */
+.projectsGrid {
+  display: grid;
+  gap: 10px;
+  margin-top: 2%;
+  margin-bottom: 4%;
+
+  /* Mobile first - 1 colonne sur petit écran */
+  grid-template-columns: 1fr;
+
+  /* Tablette - 2 colonnes */
+  @media (min-width: 868px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 
 }
 
 .productionCard {
   width: 100%;
-  height: 60%;
-  margin-top: 1%;
-  margin-bottom: 1%;
+  height: auto;
   text-align: justify;
   white-space: normal;
   word-break: break-word;
   border: #333533 solid 1px;
   border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+  0 6px 20px rgba(0, 0, 0, 0.19);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
 
+.productionCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3),
+  0 10px 25px rgba(0, 0, 0, 0.22);
 }
 
 .titleProject {
   color: #F5CB5C;
-  font-size: clamp(20px, 1.2vw, 30px);
+  font-size: clamp(16px, 1.2vw, 24px);
   font-weight: bold;
   text-align: justify;
   white-space: normal;
   word-break: break-word;
-  margin: 1%;
-
+  margin-top: 1%;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 .descriptionProject {
   color: #CFDBD5;
   text-align: justify;
-  font-size: clamp(12px, 0.9vw, 25px);
+  font-size: clamp(12px, 1vw, 18px);
   white-space: normal;
   word-break: break-word;
+  flex-grow: 1;
 }
 
-.groupChip {
-  margin-left: 1%;
+/* Container pour les chips - affichage en ligne avec retour à la ligne */
+.chipContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 16px;
+  align-items: flex-start;
 }
 
 .chipItem {
   background-color: #f4db87;
   color: black;
   font-weight: bold;
-  font-size: clamp(8px, 1vw, 15px);
-  white-space: normal;
-  word-break: break-word;
+  font-size: clamp(10px, 1vw, 14px);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .btnCodeSource {
-  margin-bottom: 1%;
-  margin-left: 1%;
+  margin-bottom: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+  align-self: flex-start;
 }
 
 .titleArea {
@@ -728,14 +679,57 @@ const itemsParallax = ref([
   align-items: center;
   white-space: normal;
   word-break: break-word;
+  padding: 16px 16px 0 16px;
 }
 
 .statutProjectInProgress {
   color: #f4740c;
+  margin-left: 8px;
+  flex-shrink: 0;
 }
 
 .statutProjectPrivate {
   color: red;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+.statutProjectScholar {
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+.interSectionProject {
+  margin-top: 4%;
+  font-size: clamp(24px, 2vw, 32px);
+  margin-bottom: 2%;
+  color: #F5CB5C;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .titleProject {
+    font-size: 18px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .descriptionProject {
+    font-size: 14px;
+  }
+
+  .chipContainer {
+    padding: 12px;
+  }
+
+  .btnCodeSource {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .titleArea {
+    padding: 12px 12px 0 12px;
+  }
 }
 </style>
-
