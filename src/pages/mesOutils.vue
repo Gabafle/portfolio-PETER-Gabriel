@@ -4,7 +4,6 @@
       <div class="title">
         <h1>Mes Outils et Langages</h1>
       </div>
-      <v-divider />
       <v-container
         max-width="100%"
         max-height="50%"
@@ -133,7 +132,7 @@
           </v-slide-group>
         </v-sheet>
       </v-container>
-      <v-divider />
+
       <v-container
         max-width="100%"
         max-height="50%"
@@ -293,7 +292,7 @@
           </v-slide-group>
         </v-sheet>
       </v-container>
-      <v-divider />
+
       <v-container
         max-width="100%"
         max-height="50%"
@@ -431,8 +430,8 @@ watch(drawer, (newVal) => {
   color: #F5CB5C;
   width: 100%;
   height: 80%;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  margin-top: 6%;
+  margin-bottom: 3%;
   font-size: 130%;
 }
 
@@ -445,20 +444,24 @@ watch(drawer, (newVal) => {
   font-size: 200%;
   padding-top: 5%;
   padding-bottom: 4%;
+  margin-bottom: 2%;
 }
 
 .styleSheet {
   max-width: 100%;
   background-color: #242423;
-  margin-top: 1%;
-  margin-bottom: 5%;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  padding-bottom: 1%;
+
 }
 
 .styleCard {
   width: 280px;
   height: 600px;
   background-color: #333533;
-  margin: 1% 0.5%;
+  margin-right: 1%;
+  margin-left: 0.2%;
   margin-top: 2%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),

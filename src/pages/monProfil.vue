@@ -1,9 +1,12 @@
 <template>
   <DefaultLayout>
     <v-app class="contentPage">
-      <h1 class="title">
-        À Propos
-      </h1>
+      <div class="title">
+        <h1 >
+          À Propos
+        </h1>
+      </div>
+
 
       <h2 class="subtitle">
         Ma Description
@@ -40,6 +43,7 @@
         <v-stepper
           class="stepperButton"
           :items="['2025-2024', '2024-2023','2023-2022']"
+          editable
         >
           <template #item.1>
             <v-card>
@@ -72,8 +76,10 @@
                     </h2>
                     <br>
                     <p class="timelineContent">
-                      Durant cet échange, j'ai eu la chance d'approfondir mes connaissances en sécurité des Réseaux et dans les technologies Big Data.
-                      J'ai également pu approfondir mes connaissances en C, en mathématiques et dans l'étude des signaux.
+                      Durant cet échange, j'ai eu la chance d'approfondir mes connaissances en sécurité des Réseaux et
+                      dans les technologies Big Data.
+                      J'ai également pu approfondir mes connaissances en C, en mathématiques et dans l'étude des
+                      signaux.
                     </p>
                   </div>
                 </v-timeline-item>
@@ -84,8 +90,10 @@
                     </h2>
                     <br>
                     <p class="timelineContent">
-                      La librairie langChaine4j est une librairie Java qui se base sur la librairie LangChain en python pour la création de LLM ou de modèle de manière générale.
-                      Durant ce laps de temps, j'ai cherché à comprendre comment la librairie fonctionnait en essayant de recréer un LLM.
+                      La librairie langChaine4j est une librairie Java qui se base sur la librairie LangChain en python
+                      pour la création de LLM ou de modèle de manière générale.
+                      Durant ce laps de temps, j'ai cherché à comprendre comment la librairie fonctionnait en essayant
+                      de recréer un LLM.
                     </p>
                   </div>
                 </v-timeline-item>
@@ -97,7 +105,8 @@
                     </h2>
                     <br>
                     <p class="timelineContent">
-                      Durant ce premier semestre, j'ai pu terminer mon projet d'étude de scanner Lidar et découvrir de nouvelles notions en Statistique, Node Js, Mécatronique ou encore en développement assembleur.
+                      Durant ce premier semestre, j'ai pu terminer mon projet d'étude de scanner Lidar et découvrir de
+                      nouvelles notions en Statistique, Node Js, Mécatronique ou encore en développement assembleur.
                     </p>
                   </div>
                 </v-timeline-item>
@@ -122,7 +131,10 @@
                     </h2>
                     <br>
                     <p class="timelineContent">
-                      Développer une librairie en JAVA permettant de générer des données DICOM (format/standard d'échange d'images en imagerie médicale) à partir de critères simples (géométrie, stratégie de colorisation des pixels ...) afin de pouvoir utiliser ces données générées comme données de test des applications à la place de données patient réel.
+                      Développer une librairie en JAVA permettant de générer des données DICOM (format/standard
+                      d'échange d'images en imagerie médicale) à partir de critères simples (géométrie, stratégie de
+                      colorisation des pixels ...) afin de pouvoir utiliser ces données générées comme données de test
+                      des applications à la place de données patient réel.
                     </p>
                   </div>
                 </v-timeline-item>
@@ -134,7 +146,8 @@
                     </h2>
                     <br>
                     <p class="timelineContent">
-                      Durant ma première année d'école supérieure, j'ai pu apprendre les bases de l'ingénierie et de l'informatique.
+                      Durant ma première année d'école supérieure, j'ai pu apprendre les bases de l'ingénierie et de
+                      l'informatique.
 
                       <br>
                       <br>
@@ -165,7 +178,8 @@
                       PASS TON HACK D'ABORD
                     </h2>
                     <p class="timelineContent">
-                      Pass Ton Hack d'abord était un concours de l'Etat qui avait pour objectif de sensibilité les jeunes sur la cybersécurité.
+                      Pass Ton Hack d'abord était un concours de l'Etat qui avait pour objectif de sensibilité les
+                      jeunes sur la cybersécurité.
                     </p>
                   </div>
                 </v-timeline-item>
@@ -176,7 +190,8 @@
                       BAC Spécialité Maths, Physique, Maths Expert
                     </h2>
                     <p class="timelineContent">
-                      J'ai eu mon BAC avec les spécialités Maths, Physique et Maths Expert avec mention assez bien. J'ai fait mon BAC dans le lycée privée catholique Jean Paul II
+                      J'ai eu mon BAC avec les spécialités Maths, Physique et Maths Expert avec mention assez bien. J'ai
+                      fait mon BAC dans le lycée privée catholique Jean Paul II
                     </p>
                   </div>
                 </v-timeline-item>
@@ -186,7 +201,8 @@
         </v-stepper>
       </v-container>
 
-      <h2  id="downloadCV" class="subtitle">
+
+      <h2 id="downloadCV" class="subtitle">
         Mon CV
       </h2>
 
@@ -234,7 +250,7 @@ import DefaultLayout from "@/components/defaultLayout.vue";
 function scrollToCV() {
   const element = document.getElementById('downloadCV');
   if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
+    element.scrollIntoView({behavior: 'smooth'});
   }
 }
 
@@ -246,13 +262,15 @@ function scrollToCV() {
 .CVcontainer {
   width: 80%;
 }
-.cardCV{
+
+.cardCV {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: clamp(16px, 2vw, 25px);
   height: 120%;
 }
+
 .titleCV {
   color: #F5CB5C;
   font-size: clamp(16px, 2vw, 25px);
@@ -260,12 +278,14 @@ function scrollToCV() {
   white-space: normal;
   word-break: break-word;
 }
-.subtitleCV{
+
+.subtitleCV {
   font-size: clamp(10px, 2vw, 15px);
   text-align: center;
   white-space: normal;
   word-break: break-word;
 }
+
 .btnDownload {
   margin-top: 1rem;
   background-color: #0a7c5e;
@@ -273,6 +293,10 @@ function scrollToCV() {
   white-space: normal;
   word-break: break-word;
   text-align: center;
+}
+
+.btnDownload:hover {
+  transform: scale(1.02);
 }
 
 .vf-file-preview-pdf-container {
@@ -287,18 +311,20 @@ function scrollToCV() {
   border: none;
 }
 
-.contentPage{
+.contentPage {
   margin-bottom: 10%;
 }
 
 .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   color: #F5CB5C;
-  font-size: clamp(50px, 3vw, 60px);
-  margin-top: 2%;
-  margin-bottom: 2%;
+  font-size: clamp(25px, 3vw, 35px);
   white-space: normal;
   word-break: break-word;
+  margin-top: 4%;
 }
 
 .subtitle {
@@ -313,7 +339,7 @@ function scrollToCV() {
   padding-top: 5%;
   padding-bottom: 4%;
 
-  margin-top: 3.2%;
+  margin-top: 3%;
   margin-bottom: 1.2%;
 }
 

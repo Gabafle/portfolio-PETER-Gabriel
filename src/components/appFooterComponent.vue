@@ -42,7 +42,6 @@ const icons = [
   justify-content: center;
   elevation: below;
   background-color: #1b1a1a;
-  padding-top: 3%;
   padding-bottom: 2%;
 
 }

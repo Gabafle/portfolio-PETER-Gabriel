@@ -1,27 +1,22 @@
 <template>
   <DefaultLayout>
     <v-app class="contentPage">
-      <v-container
-        class="pa-0"
-        fluid
-      >
-        <v-carousel
-          show-arrows
-          height="auto"
-          class="responsive-carousel"
-        >
-          <v-carousel-item
-            v-for="(itemParalax, index) in itemsParallax"
-            :key="index"
-          >
-            <v-parallax
-              :src="itemParalax"
-              class="parallax-image"
-              height="auto"
-            />
-          </v-carousel-item>
-        </v-carousel>
-      </v-container>
+
+      <section class="hero-parallax">
+        <div class="parallax-bg"></div>
+        <div class="hero-content">
+          <div class="welcome-text" ref="welcomeText">
+            <h1 class="main-title">Bienvenue</h1>
+            <h2 class="sub-title">Gabriel PETER</h2>
+            <p class="hero-description">Apprentie Développeur Passionné • Étudiant Ingénieur ESILV</p>
+            <div class="scroll-indicator">
+              <v-icon class="scroll-arrow">mdi-chevron-down</v-icon>
+              <span>Découvrir</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       <v-container class="descrtionAll" fluid>
         <v-row class="mainRow" no-gutters>
@@ -65,7 +60,9 @@
             <v-row dense class="smallCardPresentationList">
               <v-col cols="12" sm="6" md="4" v-for="(card, index) in smallCards" :key="index">
                 <v-hover v-slot="{ isHovering, props }">
-                  <v-card class="smallDescritpionItems" :elevation="isHovering ? 12 : 5" v-bind="props" :color="isHovering ? '#cc9400' : undefined">
+                  <v-card class="smallDescritpionItems" :elevation="isHovering ? 12 : 5" v-bind="props"
+                          :color="isHovering ? '#cc9400' : undefined"
+                  >
                     <v-card-title class="titleDescritpion">{{ card.title }}</v-card-title>
                     <v-card-text>
                       <div v-for="(item, i) in card.items" :key="i">{{ item }}</div>
@@ -110,7 +107,8 @@
               prepend-icon="mdi-github"
               href="https://github.com/Gabafle/PortFolio-PETER-Gabriel.git"
               target="_blank"
-              class="btnCodeSource">
+              class="btnCodeSource"
+            >
               Code source
             </v-btn>
           </v-card>
@@ -124,7 +122,8 @@
                 <template #activator="{ props }">
                   <v-icon
                     v-bind="props"
-                    class="statutProjectPrivate">
+                    class="statutProjectPrivate"
+                  >
                     mdi-badge-account
                   </v-icon>
                 </template>
@@ -485,11 +484,18 @@ import {ref} from "vue";
 import DefaultLayout from "@/components/defaultLayout.vue";
 //Parallax
 const itemsParallax = ref([
-  new URL('@/assets/parallax/image1.jpg', import.meta.url).href,
-  new URL('@/assets/parallax/image3.jpg', import.meta.url).href,
-  new URL('@/assets/parallax/image4.jpg', import.meta.url).href,
-  new URL('@/assets/parallax/image5.jpg', import.meta.url).href,
-  new URL('@/assets/parallax/image6.jpg', import.meta.url).href
+  {
+    content:"gthvjfkvf"
+  },
+  {
+    content:"gthvjfkvf"
+  },
+  {
+    content:"gthvjfkvf"
+  },
+  {
+    content:"gthvjfkvf"
+  },
 ]);
 
 const smallCards = [
@@ -512,17 +518,159 @@ const smallCards = [
 .contentPage {
   margin-bottom: 10%;
 }
+/* ======== PARALLAX HERO SECTION ======== */
+.hero-parallax {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.parallax-bg {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+.parallax-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(245, 203, 92, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(245, 203, 92, 0.05) 0%, transparent 50%),
+    linear-gradient(45deg, transparent 0%, rgba(245, 203, 92, 0.02) 50%, transparent 100%);
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 1;
+  padding: 2rem;
+  transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+}
+
+.welcome-text {
+  animation: fadeInUp 2s ease-out;
+}
+
+.main-title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 700;
+  color: #F5CB5C;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.02em;
+  animation: textGlow 3s ease-in-out infinite alternate;
+}
+
+.sub-title {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 300;
+  color: #CFDBD5;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.1em;
+}
+
+.hero-description {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: #CFDBD5;
+  opacity: 0.9;
+  margin-bottom: 3rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: #F5CB5C;
+  font-size: 0.9rem;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scroll-indicator:hover {
+  transform: scale(1.1);
+  color: #fff;
+}
+
+.scroll-arrow {
+  font-size: 2rem;
+  animation: bounce 2s infinite;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textGlow {
+  from {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 20px rgba(245, 203, 92, 0.3);
+  }
+  to {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 30px rgba(245, 203, 92, 0.6), 0 0 40px rgba(245, 203, 92, 0.4);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Responsive pour le hero */
+@media (max-width: 768px) {
+  .hero-parallax {
+    height: 80vh;
+  }
+
+  .hero-content {
+    padding: 1rem;
+  }
+
+  .main-title {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+  }
+
+  .sub-title {
+    font-size: clamp(1.2rem, 4vw, 2rem);
+  }
+
+  .hero-description {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    margin-bottom: 2rem;
+  }
+}
 /*======== Parallax ======*/
-.parallax-image {
-  background-size: contain;
-  min-height: 200px;
-  height: 50vh;
-}
 
-.responsive-carousel {
-  max-height: 80vh;
-}
 
 .styleSection {
   max-width: 100%;
@@ -535,6 +683,7 @@ const smallCards = [
   padding-top: 5%;
   padding-bottom: 5%;
   margin-top: 5%;
+  border-radius:1%;
 }
 
 /* ======== Description ==========*/
@@ -549,7 +698,7 @@ const smallCards = [
 }
 
 .descrtionAll {
-  padding: 18px;
+  margin-top: 5%;
 }
 
 .leftPart {
@@ -561,50 +710,49 @@ const smallCards = [
 }
 
 .leftPart h1 {
-  margin-bottom: 16px;
+  margin-bottom: 1px;
   color: #F5CB5C;
   font-weight: bold;
 }
 
 .profileImage {
-  border-radius: 50%;
-  width: 500px;
-  height: 500px;
-  object-fit: cover;
+  width: 100%;
+  margin-bottom: 8%;
 }
 
 .rightPart {
   display: flex;
   flex-direction: column;
+  font-size: 1.2rem;
 }
 
 .smallCardPresentationList {
   margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
 }
 
 .smallDescritpionItems {
   height: 100%;
   color: #CFDBD5;
-  font-size: clamp(12px, 1vw, 25px);
+  font-size: 1.2rem;
+  border-radius: 2%;
 }
 
 /*========= Production Style =========*/
-/* Grille responsive pour les cartes de projets */
 .projectsGrid {
   display: grid;
   gap: 10px;
   margin-top: 2%;
   margin-bottom: 4%;
 
-  /* Mobile first - 1 colonne sur petit écran */
   grid-template-columns: 1fr;
 
   /* Tablette - 2 colonnes */
   @media (min-width: 868px) {
     grid-template-columns: repeat(2, 1fr);
   }
-
-
 }
 
 .productionCard {
