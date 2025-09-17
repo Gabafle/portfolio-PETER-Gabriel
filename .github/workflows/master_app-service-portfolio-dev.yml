@@ -61,6 +61,7 @@ jobs:
         with:
           app-name: 'app-service-portfolio-dev'
           slot-name: 'Production'
-          package: ./node-app
+          package: ./dist
 
           
+
