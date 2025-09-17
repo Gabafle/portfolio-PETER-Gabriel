@@ -63,11 +63,11 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'app-service-portfolio-dev'
-          slot-name: 'Production'
           package: ./
           
 
           
+
 
 
 
